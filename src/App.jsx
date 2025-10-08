@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import './App.css'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'products', 'equipment', 'team', 'projects', 'contact']
+      const sections = ['home', 'about', 'products', 'equipment', 'gallery', 'team', 'projects', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -16,6 +25,10 @@ function App() {
           const { offsetTop, offsetHeight } = element
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section)
+            // Update the URL hash to match the current section
+            if (window.location.hash !== `#${section}`) {
+              window.history.replaceState(null, null, `#${section}`)
+            }
             break
           }
         }
@@ -34,10 +47,52 @@ function App() {
     setIsMenuOpen(false)
   }
 
-  const handleFormSubmit = (e) => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault()
-    alert('Thank you for your message! We will get back to you soon.')
-    e.target.reset()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_planttech' // You'll need to create this in EmailJS
+      const templateId = 'template_contact' // You'll need to create this in EmailJS
+      const publicKey = 'YOUR_PUBLIC_KEY' // You'll need to get this from EmailJS
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'info.planttech@gmail.com'
+        },
+        publicKey
+      )
+
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      })
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -54,6 +109,7 @@ function App() {
             <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} onClick={() => scrollToSection('about')}>About</a>
             <a href="#products" className={`nav-link ${activeSection === 'products' ? 'active' : ''}`} onClick={() => scrollToSection('products')}>Products</a>
             <a href="#equipment" className={`nav-link ${activeSection === 'equipment' ? 'active' : ''}`} onClick={() => scrollToSection('equipment')}>Equipment</a>
+            <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a>
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => scrollToSection('projects')}>Projects</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>Contact</a>
@@ -237,6 +293,70 @@ function App() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="gallery">
+        <div className="container">
+          <h2 className="section-title">Factory Gallery</h2>
+          <p className="section-subtitle">Explore our state-of-the-art manufacturing facility and equipment</p>
+          <div className="gallery-grid">
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/equipment-reactor.jpg" alt="Herbal Extraction Reactors" />
+                <div className="gallery-overlay">
+                  <h3>Herbal Extraction Reactors</h3>
+                  <p>Multi-chamber, jacketed, vacuum-compatible reactors</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/equipment-distillation.jpg" alt="Distillation Equipment" />
+                <div className="gallery-overlay">
+                  <h3>Distillation Equipment</h3>
+                  <p>High-efficiency distillation & condensation systems</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/equipment-storage.jpg" alt="Storage Tanks" />
+                <div className="gallery-overlay">
+                  <h3>Storage Tanks</h3>
+                  <p>SS / food-grade storage with jacket options</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/heat-exchanger.jpg" alt="Heat Exchangers" />
+                <div className="gallery-overlay">
+                  <h3>Heat Exchangers</h3>
+                  <p>Plate, shell-tube, and spiral heat exchangers</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/hero-plant.jpg" alt="Manufacturing Plant" />
+                <div className="gallery-overlay">
+                  <h3>Manufacturing Plant</h3>
+                  <p>Our state-of-the-art production facility</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/equipment-reactor.jpg" alt="Process Equipment" />
+                <div className="gallery-overlay">
+                  <h3>Process Equipment</h3>
+                  <p>Advanced processing machinery for various industries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section id="team" className="team">
         <div className="container">
@@ -331,18 +451,61 @@ function App() {
             <div className="contact-form">
               <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
-                  <input type="text" placeholder="Your Name" required />
+                  <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Your Name" 
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Your Email" required />
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Your Email" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group">
-                  <input type="tel" placeholder="Your Phone" />
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    placeholder="Your Phone" 
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div className="form-group">
-                  <textarea placeholder="Your Message" rows="5" required></textarea>
+                  <textarea 
+                    name="message"
+                    placeholder="Your Message" 
+                    rows="5" 
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                  ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                {submitStatus === 'success' && (
+                  <div className="form-message success">
+                    Thank you for your message! We will get back to you soon.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="form-message error">
+                    Sorry, there was an error sending your message. Please try again or contact us directly.
+                  </div>
+                )}
+                <button 
+                  type="submit" 
+                  className="btn btn-primary"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
               </form>
             </div>
           </div>
