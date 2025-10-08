@@ -13,6 +13,7 @@ function App() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [expandedProductItem, setExpandedProductItem] = useState(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +54,10 @@ function App() {
       ...prev,
       [name]: value
     }))
+  }
+
+  const toggleProductItemDescription = (productItemId) => {
+    setExpandedProductItem(expandedProductItem === productItemId ? null : productItemId)
   }
 
   const handleFormSubmit = async (e) => {
@@ -171,64 +176,148 @@ function App() {
             <div className="product-category">
               <h3>Process Equipment</h3>
               <ul>
-                <li>Reaction Vessel</li>
-                <li>Agitated Nutsche Filter Dryer (ANFD)</li>
-                <li>Shell & Tube Type Heat Exchanger</li>
-                <li>Blender</li>
-                <li>Other Process Equipment</li>
+                <li onClick={() => toggleProductItemDescription('reaction-vessel')} style={{cursor: 'pointer'}}>
+                  Reaction Vessel
+                  {expandedProductItem === 'reaction-vessel' && <div className="product-item-description">Stainless steel vessels for chemical reactions with temperature and pressure control.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('anfd')} style={{cursor: 'pointer'}}>
+                  Agitated Nutsche Filter Dryer (ANFD)
+                  {expandedProductItem === 'anfd' && <div className="product-item-description">Integrated filtration and drying system for pharmaceutical and chemical processes.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('heat-exchanger')} style={{cursor: 'pointer'}}>
+                  Shell & Tube Type Heat Exchanger
+                  {expandedProductItem === 'heat-exchanger' && <div className="product-item-description">Efficient heat transfer equipment for industrial heating and cooling applications.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('blender')} style={{cursor: 'pointer'}}>
+                  Blender
+                  {expandedProductItem === 'blender' && <div className="product-item-description">High-speed mixing equipment for uniform blending of powders and liquids.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('other-process')} style={{cursor: 'pointer'}}>
+                  Other Process Equipment
+                  {expandedProductItem === 'other-process' && <div className="product-item-description">Customized process equipment designed for specific manufacturing requirements.</div>}
+                </li>
               </ul>
             </div>
             
             <div className="product-category">
               <h3>Turnkey Projects</h3>
               <ul>
-                <li>Herbal Extraction</li>
-                <li>Essential Oil Extraction</li>
-                <li>Mentha Oil Distillation Plant</li>
-                <li>Menthol Crystal Plant</li>
-                <li>Peppermint Oil Distillation Plant</li>
-                <li>Used Oil Recycling Plant</li>
-                <li>Solvent Recovery Plant</li>
-                <li>Dairy Plants</li>
+                <li onClick={() => toggleProductItemDescription('herbal-extraction')} style={{cursor: 'pointer'}}>
+                  Herbal Extraction
+                  {expandedProductItem === 'herbal-extraction' && <div className="product-item-description">Complete plant setup for extracting active compounds from medicinal herbs.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('essential-oil')} style={{cursor: 'pointer'}}>
+                  Essential Oil Extraction
+                  {expandedProductItem === 'essential-oil' && <div className="product-item-description">Steam distillation systems for producing high-quality essential oils from plants.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('mentha-oil')} style={{cursor: 'pointer'}}>
+                  Mentha Oil Distillation Plant
+                  {expandedProductItem === 'mentha-oil' && <div className="product-item-description">Specialized distillation equipment for mentha oil production with high purity.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('menthol-crystal')} style={{cursor: 'pointer'}}>
+                  Menthol Crystal Plant
+                  {expandedProductItem === 'menthol-crystal' && <div className="product-item-description">Crystallization and purification systems for menthol crystal manufacturing.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('peppermint-oil')} style={{cursor: 'pointer'}}>
+                  Peppermint Oil Distillation Plant
+                  {expandedProductItem === 'peppermint-oil' && <div className="product-item-description">Complete distillation setup for peppermint oil extraction and processing.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('used-oil-recycling')} style={{cursor: 'pointer'}}>
+                  Used Oil Recycling Plant
+                  {expandedProductItem === 'used-oil-recycling' && <div className="product-item-description">Environmental solution for recycling and purifying used industrial oils.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('solvent-recovery')} style={{cursor: 'pointer'}}>
+                  Solvent Recovery Plant
+                  {expandedProductItem === 'solvent-recovery' && <div className="product-item-description">Cost-effective solvent recovery systems for chemical and pharmaceutical industries.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('dairy-plants')} style={{cursor: 'pointer'}}>
+                  Dairy Plants
+                  {expandedProductItem === 'dairy-plants' && <div className="product-item-description">Complete dairy processing plants for milk, cheese, and dairy product manufacturing.</div>}
+                </li>
               </ul>
             </div>
             
             <div className="product-category">
               <h3>Material Handling System (Conveyor)</h3>
               <ul>
-                <li>Screw Conveyor</li>
-                <li>Pneumatic Conveying System</li>
-                <li>Belt Conveyor & Bucket Elevator</li>
+                <li onClick={() => toggleProductItemDescription('screw-conveyor')} style={{cursor: 'pointer'}}>
+                  Screw Conveyor
+                  {expandedProductItem === 'screw-conveyor' && <div className="product-item-description">Helical screw mechanism for efficient horizontal and inclined material transport.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('pneumatic-conveying')} style={{cursor: 'pointer'}}>
+                  Pneumatic Conveying System
+                  {expandedProductItem === 'pneumatic-conveying' && <div className="product-item-description">Air-powered system for dust-free transportation of powders and granular materials.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('belt-conveyor')} style={{cursor: 'pointer'}}>
+                  Belt Conveyor & Bucket Elevator
+                  {expandedProductItem === 'belt-conveyor' && <div className="product-item-description">Continuous belt system with vertical bucket elevators for bulk material handling.</div>}
+                </li>
               </ul>
             </div>
             
             <div className="product-category">
               <h3>Solvent</h3>
               <ul>
-                <li>Di Methyl Sulfoxide (DMSO)</li>
-                <li>Mix Solvent</li>
-                <li>Sulfolane</li>
-                <li>Tri Butyl Tin Chloride</li>
-                <li>Toluene</li>
-                <li>Acetonitrile</li>
+                <li onClick={() => toggleProductItemDescription('dmso')} style={{cursor: 'pointer'}}>
+                  Di Methyl Sulfoxide (DMSO)
+                  {expandedProductItem === 'dmso' && <div className="product-item-description">High-purity polar aprotic solvent for pharmaceutical and chemical applications.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('mix-solvent')} style={{cursor: 'pointer'}}>
+                  Mix Solvent
+                  {expandedProductItem === 'mix-solvent' && <div className="product-item-description">Customized solvent blends for specific industrial and laboratory processes.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('sulfolane')} style={{cursor: 'pointer'}}>
+                  Sulfolane
+                  {expandedProductItem === 'sulfolane' && <div className="product-item-description">Industrial solvent for gas processing and extraction applications.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('tbtc')} style={{cursor: 'pointer'}}>
+                  Tri Butyl Tin Chloride
+                  {expandedProductItem === 'tbtc' && <div className="product-item-description">Specialized organotin compound for catalytic and chemical synthesis processes.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('toluene')} style={{cursor: 'pointer'}}>
+                  Toluene
+                  {expandedProductItem === 'toluene' && <div className="product-item-description">Aromatic hydrocarbon solvent for paints, adhesives, and chemical manufacturing.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('acetonitrile')} style={{cursor: 'pointer'}}>
+                  Acetonitrile
+                  {expandedProductItem === 'acetonitrile' && <div className="product-item-description">Polar aprotic solvent for HPLC, pharmaceutical synthesis, and analytical chemistry.</div>}
+                </li>
               </ul>
             </div>
             
             <div className="product-category">
               <h3>Pollution Control</h3>
               <ul>
-                <li>Dust Extraction System</li>
-                <li>Ash Handling System</li>
-                <li>Air Pollution Control</li>
-                <li>Wet Scrubber</li>
+                <li onClick={() => toggleProductItemDescription('dust-extraction')} style={{cursor: 'pointer'}}>
+                  Dust Extraction System
+                  {expandedProductItem === 'dust-extraction' && <div className="product-item-description">Industrial dust collection systems for clean air and worker safety.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('ash-handling')} style={{cursor: 'pointer'}}>
+                  Ash Handling System
+                  {expandedProductItem === 'ash-handling' && <div className="product-item-description">Automated systems for collection, transport, and disposal of industrial ash.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('air-pollution')} style={{cursor: 'pointer'}}>
+                  Air Pollution Control
+                  {expandedProductItem === 'air-pollution' && <div className="product-item-description">Comprehensive air quality management systems for environmental compliance.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('wet-scrubber')} style={{cursor: 'pointer'}}>
+                  Wet Scrubber
+                  {expandedProductItem === 'wet-scrubber' && <div className="product-item-description">Gas cleaning equipment using liquid scrubbing for pollutant removal.</div>}
+                </li>
               </ul>
             </div>
             
             <div className="product-category">
               <h3>Herbal Division</h3>
               <ul>
-                <li>Introduction</li>
-                <li>Products</li>
+                <li onClick={() => toggleProductItemDescription('herbal-intro')} style={{cursor: 'pointer'}}>
+                  Introduction
+                  {expandedProductItem === 'herbal-intro' && <div className="product-item-description">Overview of our specialized herbal processing capabilities and expertise.</div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('herbal-products')} style={{cursor: 'pointer'}}>
+                  Products
+                  {expandedProductItem === 'herbal-products' && <div className="product-item-description">Complete range of herbal extracts, oils, and natural product formulations.</div>}
+                </li>
               </ul>
             </div>
           </div>
