@@ -519,7 +519,9 @@ function App() {
                 <i className="icon-location"></i>
                 <div>
                   <h4>Address</h4>
-                  <p>Haridwar, Uttarakhand, India</p>
+                  <p>Khasra NO. 587, Akbarpuruood, Behind Shree Cement<br />
+                  Haridwar - Laksar Road, Lakshar<br />
+                  Haridwar, Uttarakhand, India-247663</p>
                 </div>
               </div>
               <div className="contact-item">
@@ -531,9 +533,9 @@ function App() {
               </div>
               <div className="contact-item">
                 <i className="icon-phone"></i>
-      <div>
+                <div>
                   <h4>Phone</h4>
-                  <p>+91-75033-22415</p>
+                  <p>+91-8130000846<br />+91-8840804180</p>
                 </div>
               </div>
             </div>
