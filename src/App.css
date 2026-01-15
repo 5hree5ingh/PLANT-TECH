@@ -744,22 +744,18 @@ section {
 }
 
 .member-article {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, #32cd32, #7cfc00);
-  color: white;
+  display: block;
+  margin-top: 10px;
+  color: #32cd32;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(50, 205, 50, 0.2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .member-article:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(50, 205, 50, 0.3);
+  color: #7cfc00;
+  text-decoration: underline;
 }
 
 /* Projects Section */

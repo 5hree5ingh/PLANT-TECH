@@ -492,7 +492,7 @@ function App() {
                 className="member-article"
                 onClick={(e) => e.stopPropagation()}
               >
-                📄 Featured Article: Ashwagandha Extraction Setup
+                Featured Article: Ashwagandha Extraction Plant Setup
               </a>
             </div>
           </div>
