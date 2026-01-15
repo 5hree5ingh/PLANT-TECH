@@ -478,7 +478,7 @@ function App() {
               <p className="member-role">M. Pharma, 16 years' experience</p>
               <p className="member-expertise">Herbal, pharmaceuticals, nutraceuticals & formulations</p>
             </div>
-            <div className="team-member">
+            <div className="team-member" style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/ashish-singh-01371326/', '_blank')}>
               <div className="member-avatar">
                 <i className="icon-person"></i>
               </div>
@@ -496,22 +496,22 @@ function App() {
           <h2 className="section-title">Current Working Projects</h2>
           <div className="projects-grid">
             <div className="project-card">
-              <div className="project-icon">
-                <i className="icon-industry"></i>
+              <div className="project-image">
+                <img src="/monard.png" alt="Monard Industries" />
               </div>
               <h3>Monard Industries</h3>
               <p>Turnkey herbal extraction & processing setup</p>
             </div>
             <div className="project-card">
-              <div className="project-icon">
-                <i className="icon-nutraceutical"></i>
+              <div className="project-image">
+                <img src="/himalayan.jpg" alt="Himalayan Nutraceuticals" />
               </div>
               <h3>Himalayan Nutraceuticals</h3>
               <p>Customized machinery for natural actives & formulations</p>
             </div>
             <div className="project-card">
-              <div className="project-icon">
-                <i className="icon-wellness"></i>
+              <div className="project-image">
+                <img src="/suwasthi.jpg" alt="Suwasthi India" />
               </div>
               <h3>Suwasthi India</h3>
               <p>End-to-end plant solutions for herbal & wellness products</p>
@@ -562,14 +562,6 @@ function App() {
                   <p>phytoingredients@gmail.com<br />
                     info@phytoingredients.com<br />
                     +91-8840804180</p>
-                </div>
-              </div>
-              <div className="contact-item">
-                <i className="icon-phone"></i>
-                <div>
-                  <h4>Export Inquiry</h4>
-                  <p>export@phytoingredients.com<br />
-                    +49-176-22293400</p>
                 </div>
               </div>
             </div>
