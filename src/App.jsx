@@ -470,9 +470,9 @@ function App() {
               <p className="member-role">MBA, 17 years' experience</p>
               <p className="member-expertise">Project management & business operations and Fabrication</p>
             </div>
-            <div className="team-member">
+            <div className="team-member" style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/vipul-upadhyay-932b5594/', '_blank')}>
               <div className="member-avatar">
-                <i className="icon-person"></i>
+                <img src="/vipul.jpeg" alt="Mr. Vipul" />
               </div>
               <h3>Mr. Vipul</h3>
               <p className="member-role">M. Pharma, 16 years' experience</p>
@@ -480,11 +480,20 @@ function App() {
             </div>
             <div className="team-member" style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/ashish-singh-01371326/', '_blank')}>
               <div className="member-avatar">
-                <i className="icon-person"></i>
+                <img src="/ashish.jpeg" alt="Engg. Ashish" />
               </div>
               <h3>Engg. Ashish</h3>
               <p className="member-role">B.Tech, 14 years' experience</p>
               <p className="member-expertise">Process engineering & plant design</p>
+              <a
+                href="https://www.agricultureinformation.com/forums/threads/mr-ashish-singh-how-to-set-up-ashwagandha-extract-processing-unit-and-also-provides-consultancy-for-setting-up-any-type-of-herbal-extraction-unit.210046/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="member-article"
+                onClick={(e) => e.stopPropagation()}
+              >
+                📄 Featured Article: Ashwagandha Extraction Setup
+              </a>
             </div>
           </div>
         </div>
@@ -515,6 +524,13 @@ function App() {
               </div>
               <h3>Suwasthi India</h3>
               <p>End-to-end plant solutions for herbal & wellness products</p>
+            </div>
+            <div className="project-card">
+              <div className="project-image">
+                <img src="/bharat-rasayan.png" alt="Bharat Rasayan" />
+              </div>
+              <h3>Bharat Rasayan</h3>
+              <p>Comprehensive herbal processing & extraction solutions</p>
             </div>
           </div>
         </div>
