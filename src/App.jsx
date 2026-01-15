@@ -474,7 +474,7 @@ function App() {
               <div className="member-avatar">
                 <img src="/vipul.jpeg" alt="Mr. Vipul" />
               </div>
-              <h3>Mr. Vipul</h3>
+              <h3>Mr. Vipul Upadhyay</h3>
               <p className="member-role">M. Pharma, 16 years' experience</p>
               <p className="member-expertise">Herbal, pharmaceuticals, nutraceuticals & formulations</p>
             </div>
@@ -482,8 +482,8 @@ function App() {
               <div className="member-avatar">
                 <img src="/ashish.jpeg" alt="Engg. Ashish" />
               </div>
-              <h3>Engg. Ashish</h3>
-              <p className="member-role">B.Tech, 14 years' experience</p>
+              <h3>Er. Ashish Singh  </h3>
+              <p className="member-role">Chemical Engineer, 14 years' experience</p>
               <p className="member-expertise">Process engineering & plant design</p>
               <a
                 href="https://www.agricultureinformation.com/forums/threads/mr-ashish-singh-how-to-set-up-ashwagandha-extract-processing-unit-and-also-provides-consultancy-for-setting-up-any-type-of-herbal-extraction-unit.210046/"
