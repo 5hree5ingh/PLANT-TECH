@@ -1,0 +1,17 @@
+// Product sections rearrangement and contact update script
+
+// Sections Order: Now Products has:
+// 1. Process Equipment
+// 2. Turnkey Projects
+// 3. Material Handling System (Conveyor)
+// 4. Solvent
+// 5. Herbal Division (BEFORE Pollution Control)
+// 6. Pollution Control
+
+// Contact Information:
+// Manufacturing Unit 1: Khasara No. 587, Akbarpuruood, Behind Shree Cement, Lakshar Road, Lakshar, Haridwar, Uttarakhand, India-247663
+// Manufacturing Unit 2: Plot no 1-11 . Mini Industrial Estate , Pipli , Haridwar , Laksar Road , Laksar , Haridwar , -247663 , Uttarakhand India
+
+// Sales inquiry: vipul.phytoingredients@gmail.com, vipul@phytoingredients.com, +91-8130000846
+// Purchase inquiry: phytoingredients@gmail.com, info@phytoingredients.com, +91-8840804180
+// Export inquiry: export@phytoingredients.com, +49-176-22293400

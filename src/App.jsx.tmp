@@ -1,4 +1,5 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import './App.css'
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'products', 'equipment', 'gallery', 'team', 'projects', 'contact']
+      const sections = ['home', 'about', 'products', 'certifications', 'equipment', 'gallery', 'team', 'projects', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -65,38 +66,34 @@ function App() {
     setSubmitStatus(null)
 
     try {
-      // Web3Forms API - Free forever!
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: '094878ad-0b9c-4d73-91dd-9d8a7207a1c8',
-          name: formData.name,
-          email: formData.email,
+      // EmailJS configuration
+      const serviceId = 'service_planttech' // You'll need to create this in EmailJS
+      const templateId = 'template_contact' // You'll need to create this in EmailJS
+      const publicKey = 'YOUR_PUBLIC_KEY' // You'll need to get this from EmailJS
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          subject: 'New Contact Form Submission from Planttech Website'
-        })
+          to_email: 'info@planttech.co.in'
+        },
+        publicKey
+      )
+
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
       })
-
-      const data = await response.json()
-
-      if (data.success) {
-        setSubmitStatus('success')
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: ''
-        })
-      } else {
-        throw new Error('Form submission failed')
-      }
     } catch (error) {
-      console.error('Error sending message:', error)
+      console.error('Error sending email:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -116,6 +113,7 @@ function App() {
             <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} onClick={() => scrollToSection('home')}>Home</a>
             <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} onClick={() => scrollToSection('about')}>About</a>
             <a href="#products" className={`nav-link ${activeSection === 'products' ? 'active' : ''}`} onClick={() => scrollToSection('products')}>Products</a>
+            <a href="#certifications" className={`nav-link ${activeSection === 'certifications' ? 'active' : ''}`} onClick={() => scrollToSection('certifications')}>Certifications</a>
             <a href="#equipment" className={`nav-link ${activeSection === 'equipment' ? 'active' : ''}`} onClick={() => scrollToSection('equipment')}>Equipment</a>
             <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a>
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
@@ -294,16 +292,7 @@ function App() {
               <ul>
                 <li onClick={() => toggleProductItemDescription('herbal-intro')} style={{ cursor: 'pointer' }}>
                   Introduction
-                  {expandedProductItem === 'herbal-intro' && <div className="product-item-description">Overview of our specialized herbal processing capabilities and expertise.</div>}
-                </li>
-                <li onClick={() => toggleProductItemDescription('herbal-products')} style={{ cursor: 'pointer' }}>
-                  Products
-                  {expandedProductItem === 'herbal-products' && <div className="product-item-description">Complete range of herbal extracts, oils, and natural product formulations.</div>}
-                </li>
-              </ul>
-            </div>
-
-            <div className="product-category">
+                  {expandedProductItem === 'herbal-intro' && <div className="product-item-description">Overview of our specialized herbal processing capabilities and expertise.</div>`n`n            <div className="product-category">
               <h3>Pollution Control</h3>
               <ul>
                 <li onClick={() => toggleProductItemDescription('dust-extraction')} style={{ cursor: 'pointer' }}>
@@ -323,6 +312,26 @@ function App() {
                   {expandedProductItem === 'wet-scrubber' && <div className="product-item-description">Gas cleaning equipment using liquid scrubbing for pollutant removal.</div>}
                 </li>
               </ul>
+            </div>}
+                </li>
+                <li onClick={() => toggleProductItemDescription('herbal-products')} style={{ cursor: 'pointer' }}>
+                  Products
+                  {expandedProductItem === 'herbal-products' && <div className="product-item-description">Complete range of herbal extracts, oils, and natural product formulations.</div>}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="certifications">
+        <div className="container">
+          <h2 className="section-title">Certifications & Quality Standards</h2>
+          <p className="section-subtitle">Committed to excellence through certified quality management systems</p>
+          <div className="certifications-content">
+            <div className="certificate-image">
+              <img src="/certificate.png" alt="Quality Certifications" />
             </div>
           </div>
         </div>
@@ -529,47 +538,27 @@ function App() {
               <div className="contact-item">
                 <i className="icon-location"></i>
                 <div>
-                  <h4>Manufacturing Unit 1</h4>
-                  <p>Khasara No. 587, Akbarpuruood<br />
-                    Behind Shree Cement, Lakshar Road<br />
-                    Lakshar, Haridwar<br />
-                    Uttarakhand, India - 247663</p>
-                </div>
-              </div>
-              <div className="contact-item">
-                <i className="icon-location"></i>
-                <div>
-                  <h4>Manufacturing Unit 2</h4>
-                  <p>Plot no 1-11, Mini Industrial Estate<br />
-                    Pipli, Haridwar, Laksar Road<br />
-                    Laksar, Haridwar<br />
-                    Uttarakhand, India - 247663</p>
+                  <h4>Address</h4>
+                  <p>Planttech Engineering Pvt. Ltd.<br />
+                    Khasra No. 587, Akbarpur Ood Industrial Area<br />
+                    Laksar, Haridwar – 247663<br />
+                    Uttarakhand, India<br />
+                    GSTIN: 05AAQCP2989J1ZO</p>
                 </div>
               </div>
               <div className="contact-item">
                 <i className="icon-email"></i>
                 <div>
-                  <h4>Sales Inquiry</h4>
-                  <p>vipul.phytoingredients@gmail.com<br />
-                    vipul@phytoingredients.com<br />
-                    +91-8130000846</p>
-                </div>
-              </div>
-              <div className="contact-item">
-                <i className="icon-email"></i>
-                <div>
-                  <h4>Purchase Inquiry</h4>
-                  <p>phytoingredients@gmail.com<br />
-                    info@phytoingredients.com<br />
-                    +91-8840804180</p>
+                  <h4>Email</h4>
+                  <p>info@planttech.co.in<br />
+                    sales@planttech.co.in</p>
                 </div>
               </div>
               <div className="contact-item">
                 <i className="icon-phone"></i>
                 <div>
-                  <h4>Export Inquiry</h4>
-                  <p>export@phytoingredients.com<br />
-                    +49-176-22293400</p>
+                  <h4>Phone</h4>
+                  <p>+91 813-0000-846</p>
                 </div>
               </div>
             </div>
@@ -654,3 +643,4 @@ function App() {
 }
 
 export default App
+
