@@ -566,8 +566,9 @@ function App() {
                 <i className="icon-email"></i>
                 <div>
                   <h4>Sales Inquiry</h4>
-                  <p>vipul.phytoingredients@gmail.com<br />
-                    vipul@phytoingredients.com<br />
+                  <p>info.planttech.co.in<br />
+                    sales@planttech.co.in<br />
+                    parveen@planttech.co.in <br />
                     +91-8130000846</p>
                 </div>
               </div>
@@ -575,8 +576,8 @@ function App() {
                 <i className="icon-email"></i>
                 <div>
                   <h4>Purchase Inquiry</h4>
-                  <p>phytoingredients@gmail.com<br />
-                    info@phytoingredients.com<br />
+                  <p>planttechengineeringpvtltd@gmail.com<br />
+                  info.planttech.co.in<br />
                     +91-8840804180</p>
                 </div>
               </div>
