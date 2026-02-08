@@ -1,7 +1,9 @@
 ﻿import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Download from './Download'
 import './App.css'
 
-function App() {
+function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const [formData, setFormData] = useState({
@@ -577,7 +579,7 @@ function App() {
                 <div>
                   <h4>Purchase Inquiry</h4>
                   <p>planttechengineeringpvtltd@gmail.com<br />
-                  info.planttech.co.in<br />
+                    info.planttech.co.in<br />
                     +91-8840804180</p>
                 </div>
               </div>
@@ -659,6 +661,15 @@ function App() {
         </div>
       </footer>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/download" element={<Download />} />
+    </Routes>
   )
 }
 
