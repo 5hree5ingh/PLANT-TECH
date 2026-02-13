@@ -1,7 +1,9 @@
 ﻿import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Download from './Download'
+import Brochure from './Brochure'
 import './App.css'
+
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -669,8 +671,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/download" element={<Download />} />
+      <Route path="/brochure" element={<Brochure />} />
     </Routes>
   )
 }
 
 export default App
+
