@@ -124,6 +124,7 @@ function Home() {
             <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a>
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => scrollToSection('projects')}>Projects</a>
+            <a href="/brochure" className="nav-link" onClick={(e) => { e.preventDefault(); window.location.href = '/brochure'; }}>Brochure</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>Contact</a>
           </div>
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>

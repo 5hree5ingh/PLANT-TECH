@@ -289,141 +289,236 @@ function Brochure() {
                     </div>
                 </div>
 
-                {/* PAGE 3: About Us */}
+                {/* PAGE 3: About Us - REDESIGNED */}
                 <div style={{
                     width: '210mm',
                     minHeight: '297mm',
                     background: 'white',
                     boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
                     marginTop: '20px',
-                    padding: '50px 40px'
+                    overflow: 'hidden'
                 }}>
-                    {/* Header */}
-                    <h2 style={{
-                        fontSize: '36px',
-                        fontWeight: '800',
-                        textAlign: 'center',
-                        marginBottom: '10px',
-                        color: '#1e3a8a',
-                        letterSpacing: '-0.5px'
-                    }}>
-                        About Planttech Engineering
-                    </h2>
-
-                    {/* Decorative underline */}
+                    {/* Hero Section with Gradient Background */}
                     <div style={{
-                        width: '80px',
-                        height: '4px',
-                        background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                        margin: '0 auto 40px auto'
-                    }}></div>
-
-                    {/* Company Description */}
-                    <div style={{
-                        background: 'linear-gradient(135deg, #f0f9ff 0%, #d1fae5 100%)',
-                        padding: '35px',
-                        borderRadius: '16px',
-                        marginBottom: '40px',
-                        border: '2px solid #bfdbfe'
+                        background: 'linear-gradient(135deg, #1e3a8a 0%, #0c7490 50%, #059669 100%)',
+                        padding: '45px 40px',
+                        color: 'white',
+                        position: 'relative'
                     }}>
+                        <h2 style={{
+                            fontSize: '42px',
+                            fontWeight: '900',
+                            margin: '0 0 15px 0',
+                            letterSpacing: '-1px',
+                            textAlign: 'center'
+                        }}>
+                            About Planttech Engineering
+                        </h2>
+
+                        <div style={{
+                            width: '100px',
+                            height: '4px',
+                            background: 'white',
+                            margin: '0 auto 25px auto'
+                        }}></div>
+
                         <p style={{
-                            fontSize: '15px',
+                            fontSize: '16px',
                             lineHeight: '1.8',
-                            color: '#374151',
                             textAlign: 'center',
-                            margin: 0,
-                            fontWeight: '500'
+                            margin: '0 0 30px 0',
+                            opacity: '0.95',
+                            maxWidth: '85%',
+                            marginLeft: 'auto',
+                            marginRight: 'auto'
                         }}>
                             Planttech Engineering Pvt. Ltd. is a trusted manufacturer of state-of-the-art process machinery serving the herbal, nutraceutical, pharmaceutical, and chemical industries. Based in Haridwar, Uttarakhand, at the foothills of the Himalayas, we deliver innovative, reliable, and customer-focused engineering solutions for plant setups worldwide.
                         </p>
-                    </div>
 
-                    {/* Why Choose Us Section */}
-                    <h3 style={{
-                        fontSize: '28px',
-                        fontWeight: '800',
-                        textAlign: 'center',
-                        marginBottom: '35px',
-                        color: '#0c7490'
-                    }}>
-                        Why Choose Us?
-                    </h3>
-
-                    {/* Features Grid - 2x4 */}
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
-                        gap: '22px'
-                    }}>
-                        {[
-                            { color: '#1e3a8a', title: 'Industry experts in product & machinery' },
-                            { color: '#059669', title: 'Zero consultancy charges' },
-                            { color: '#0c7490', title: 'End-to-end support until final product delivery' },
-                            { color: '#1e3a8a', title: 'Onsite installation & commissioning team' },
-                            { color: '#059669', title: 'Final product sales guarantee for Herbal extracts' },
-                            { color: '#0c7490', title: 'Consultancy for chemical, analytical & microbial lab setup' },
-                            { color: '#1e3a8a', title: 'Guidance in sourcing & selecting best quality raw materials' },
-                            { color: '#059669', title: 'Custom solutions tailored to your specific production needs' }
-                        ].map((feature, index) => (
-                            <div key={index} style={{
-                                background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
-                                padding: '22px',
-                                borderRadius: '10px',
-                                border: '2px solid #bfdbfe',
-                                boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '18px'
-                            }}>
-                                {/* Icon Circle with Gradient */}
-                                <div style={{
-                                    width: '44px',
-                                    height: '44px',
-                                    borderRadius: '50%',
-                                    background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    flexShrink: 0,
-                                    color: 'white',
-                                    fontSize: '22px',
-                                    fontWeight: 'bold',
-                                    boxShadow: '0 3px 8px rgba(30, 58, 138, 0.25)'
-                                }}>
-                                    ✓
-                                </div>
-
-                                {/* Text */}
-                                <div style={{
-                                    fontSize: '14px',
-                                    lineHeight: '1.6',
-                                    color: '#1f2937',
-                                    fontWeight: '600'
-                                }}>
-                                    {feature.title}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Bottom Badge */}
-                    <div style={{
-                        marginTop: '50px',
-                        textAlign: 'center'
-                    }}>
+                        {/* Company Stats */}
                         <div style={{
-                            display: 'inline-block',
-                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                            color: 'white',
-                            padding: '20px 40px',
-                            borderRadius: '12px',
-                            fontSize: '16px',
-                            fontWeight: '700',
-                            boxShadow: '0 6px 20px rgba(30, 58, 138, 0.3)'
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(3, 1fr)',
+                            gap: '25px',
+                            marginTop: '30px'
                         }}>
-                            🏆 ISO 9001:2015, MSME Certified Company
+                            {[
+                                { number: 'ISO 9001:2015', label: 'Certified' },
+                                { number: 'MSME', label: 'Registered' },
+                                { number: 'Haridwar', label: 'Based In' }
+                            ].map((stat, index) => (
+                                <div key={index} style={{
+                                    textAlign: 'center',
+                                    padding: '20px',
+                                    background: 'rgba(255, 255, 255, 0.15)',
+                                    borderRadius: '12px',
+                                    backdropFilter: 'blur(10px)'
+                                }}>
+                                    <div style={{
+                                        fontSize: '20px',
+                                        fontWeight: '800',
+                                        marginBottom: '5px'
+                                    }}>
+                                        {stat.number}
+                                    </div>
+                                    <div style={{
+                                        fontSize: '13px',
+                                        opacity: '0.9',
+                                        fontWeight: '500'
+                                    }}>
+                                        {stat.label}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
+
+                    {/* Main Content Section */}
+                    <div style={{
+                        padding: '40px'
+                    }}>
+                        {/* Why Choose Us Section */}
+                        <h3 style={{
+                            fontSize: '32px',
+                            fontWeight: '800',
+                            textAlign: 'center',
+                            marginBottom: '12px',
+                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                        }}>
+                            Why Choose Us
+                        </h3>
+
+                        <p style={{
+                            textAlign: 'center',
+                            fontSize: '14px',
+                            color: '#6b7280',
+                            marginBottom: '35px'
+                        }}>
+                            Comprehensive solutions for your industrial needs
+                        </p>
+
+                        {/* Features Grid - 3 columns */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(3, 1fr)',
+                            gap: '18px',
+                            marginBottom: '35px'
+                        }}>
+                            {[
+                                { title: 'Industry Experts', desc: 'Product & machinery specialists' },
+                                { title: 'Zero Charges', desc: 'No consultancy fees' },
+                                { title: 'End-to-End', desc: 'Complete support & delivery' },
+                                { title: 'Installation', desc: 'Onsite commissioning team' },
+                                { title: 'Sales Guarantee', desc: 'For herbal extracts' },
+                                { title: 'Lab Setup', desc: 'Chemical & microbial labs' },
+                                { title: 'Raw Materials', desc: 'Sourcing & selection guidance' },
+                                { title: 'Custom Solutions', desc: 'Tailored to your needs' },
+                                { title: 'Worldwide', desc: 'Global plant setups' }
+                            ].map((feature, index) => (
+                                <div key={index} style={{
+                                    textAlign: 'center',
+                                    padding: '20px 15px',
+                                    background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
+                                    borderRadius: '12px',
+                                    border: '2px solid #e0f2fe',
+                                    transition: 'transform 0.3s ease'
+                                }}>
+                                    <div style={{
+                                        width: '50px',
+                                        height: '50px',
+                                        margin: '0 auto 12px auto',
+                                        borderRadius: '50%',
+                                        background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: 'white',
+                                        fontSize: '24px',
+                                        fontWeight: 'bold',
+                                        boxShadow: '0 4px 12px rgba(30, 58, 138, 0.25)'
+                                    }}>
+                                        ✓
+                                    </div>
+                                    <div style={{
+                                        fontSize: '13px',
+                                        fontWeight: '700',
+                                        color: '#1e3a8a',
+                                        marginBottom: '4px'
+                                    }}>
+                                        {feature.title}
+                                    </div>
+                                    <div style={{
+                                        fontSize: '11px',
+                                        color: '#6b7280',
+                                        lineHeight: '1.4'
+                                    }}>
+                                        {feature.desc}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Bottom CTA Section */}
+                        <div style={{
+                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                            padding: '25px',
+                            borderRadius: '16px',
+                            textAlign: 'center',
+                            color: 'white',
+                            boxShadow: '0 8px 24px rgba(30, 58, 138, 0.3)'
+                        }}>
+                            <div style={{
+                                fontSize: '24px',
+                                fontWeight: '800',
+                                marginBottom: '8px'
+                            }}>
+                                Engineering Excellence Since Inception
+                            </div>
+                            <div style={{
+                                fontSize: '14px',
+                                opacity: '0.95'
+                            }}>
+                                State-of-the-art process machinery from the foothills of the Himalayas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Navigation Button (optional - can be shown/hidden) */}
+                <div style={{
+                    position: 'absolute',
+                    top: '20px',
+                    right: '20px',
+                    zIndex: 10
+                }}>
+                    <button
+                        onClick={() => navigate('/')}
+                        style={{
+                            padding: '10px 20px',
+                            background: 'white',
+                            border: 'none',
+                            borderRadius: '8px',
+                            fontSize: '14px',
+                            fontWeight: '600',
+                            color: '#1e3a8a',
+                            cursor: 'pointer',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                            transition: 'all 0.3s ease'
+                        }}
+                        onMouseOver={(e) => {
+                            e.target.style.transform = 'translateY(-2px)'
+                            e.target.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)'
+                        }}
+                        onMouseOut={(e) => {
+                            e.target.style.transform = 'translateY(0)'
+                            e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
+                        }}
+                    >
+                        ← Back to Home
+                    </button>
                 </div>
             </div>
         </div>
