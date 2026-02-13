@@ -487,6 +487,259 @@ function Brochure() {
                     </div>
                 </div>
 
+                {/* PAGE 4: Contact Us - Modern Design */}
+                <div style={{
+                    width: '210mm',
+                    minHeight: '297mm',
+                    background: 'white',
+                    boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
+                    marginTop: '20px',
+                    display: 'flex',
+                    flexDirection: 'column'
+                }}>
+                    {/* Company Logo and Name Section */}
+                    <div style={{
+                        textAlign: 'center',
+                        padding: '50px 40px 30px 40px',
+                        background: 'linear-gradient(135deg, #f9fafb 0%, #f0f9ff 100%)'
+                    }}>
+                        <img src="/PLANT_TECH_LOGO.png" alt="Planttech Logo" style={{
+                            height: '70px',
+                            width: 'auto',
+                            marginBottom: '20px'
+                        }} />
+                        <h1 style={{
+                            fontSize: '36px',
+                            fontWeight: '900',
+                            margin: '0 0 8px 0',
+                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                            letterSpacing: '-0.5px'
+                        }}>
+                            PLANTTECH ENGINEERING PVT. LTD.
+                        </h1>
+                        <p style={{
+                            fontSize: '13px',
+                            color: '#6b7280',
+                            margin: '0 0 15px 0',
+                            fontWeight: '600'
+                        }}>
+                            ISO 9001:2015, MSME Certified Company
+                        </p>
+                    </div>
+
+                    {/* Main Content - Contact Information */}
+                    <div style={{
+                        flex: 1,
+                        padding: '40px',
+                        background: '#ffffff'
+                    }}>
+                        {/* Two Column Layout for Offices */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: '30px',
+                            marginBottom: '40px'
+                        }}>
+                            {/* Corporate Office */}
+                            <div style={{
+                                background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
+                                padding: '30px',
+                                borderRadius: '16px',
+                                border: '2px solid #bfdbfe'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '18px',
+                                    fontWeight: '800',
+                                    color: '#1e3a8a',
+                                    margin: '0 0 15px 0',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px'
+                                }}>
+                                    <span style={{
+                                        fontSize: '24px'
+                                    }}>📍</span>
+                                    Corporate Office:
+                                </h3>
+                                <p style={{
+                                    fontSize: '14px',
+                                    lineHeight: '1.8',
+                                    color: '#374151',
+                                    margin: 0,
+                                    fontWeight: '500'
+                                }}>
+                                    Khasara No. 587, Akbarpuruood<br />
+                                    Behind Shree Cement, Lakshar Road<br />
+                                    Lakshar, Haridwar<br />
+                                    Uttarakhand, India - 247663
+                                </p>
+                            </div>
+
+                            {/* Manufacturing Unit */}
+                            <div style={{
+                                background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
+                                padding: '30px',
+                                borderRadius: '16px',
+                                border: '2px solid #bfdbfe'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '18px',
+                                    fontWeight: '800',
+                                    color: '#1e3a8a',
+                                    margin: '0 0 15px 0',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px'
+                                }}>
+                                    <span style={{
+                                        fontSize: '24px'
+                                    }}>🏭</span>
+                                    Manufacturing Unit:
+                                </h3>
+                                <p style={{
+                                    fontSize: '14px',
+                                    lineHeight: '1.8',
+                                    color: '#374151',
+                                    margin: 0,
+                                    fontWeight: '500'
+                                }}>
+                                    Plot no 1-11, Mini Industrial Estate<br />
+                                    Pipli, Haridwar, Laksar Road<br />
+                                    Laksar, Haridwar<br />
+                                    Uttarakhand, India - 247663
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Email and Call Sections */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: '30px',
+                            marginBottom: '30px'
+                        }}>
+                            {/* Email Us */}
+                            <div style={{
+                                background: 'white',
+                                padding: '25px',
+                                borderRadius: '12px',
+                                border: '2px solid #e5e7eb',
+                                boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '16px',
+                                    fontWeight: '800',
+                                    color: '#1e3a8a',
+                                    margin: '0 0 12px 0',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}>
+                                    <span style={{
+                                        fontSize: '20px'
+                                    }}>📧</span>
+                                    Email Us:
+                                </h3>
+                                <div style={{
+                                    fontSize: '13px',
+                                    lineHeight: '2',
+                                    color: '#374151',
+                                    fontWeight: '500'
+                                }}>
+                                    <div>info.planttech.co.in</div>
+                                    <div>sales@planttech.co.in</div>
+                                    <div>parveen@planttech.co.in</div>
+                                    <div>planttechengineeringpvtltd@gmail.com</div>
+                                </div>
+                            </div>
+
+                            {/* Call Us */}
+                            <div style={{
+                                background: 'white',
+                                padding: '25px',
+                                borderRadius: '12px',
+                                border: '2px solid #e5e7eb',
+                                boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '16px',
+                                    fontWeight: '800',
+                                    color: '#1e3a8a',
+                                    margin: '0 0 12px 0',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}>
+                                    <span style={{
+                                        fontSize: '20px'
+                                    }}>📞</span>
+                                    Call Us:
+                                </h3>
+                                <div style={{
+                                    fontSize: '13px',
+                                    lineHeight: '2',
+                                    color: '#374151',
+                                    fontWeight: '500'
+                                }}>
+                                    <div>+91-8130000846 (Sales)</div>
+                                    <div>+91-8840804180 (Purchase)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Contact CTA Box */}
+                        <div style={{
+                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                            padding: '30px',
+                            borderRadius: '16px',
+                            textAlign: 'center',
+                            color: 'white',
+                            boxShadow: '0 8px 24px rgba(30, 58, 138, 0.3)'
+                        }}>
+                            <h3 style={{
+                                fontSize: '22px',
+                                fontWeight: '800',
+                                margin: '0 0 10px 0'
+                            }}>
+                                Ready to Transform Your Manufacturing?
+                            </h3>
+                            <p style={{
+                                fontSize: '14px',
+                                margin: '0 0 15px 0',
+                                opacity: '0.95'
+                            }}>
+                                Get in touch with our experts for customized solutions
+                            </p>
+                            <div style={{
+                                fontSize: '13px',
+                                fontWeight: '600',
+                                opacity: '0.9'
+                            }}>
+                                We provide end-to-end support from consultation to final commissioning
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Footer */}
+                    <div style={{
+                        background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
+                        padding: '20px',
+                        textAlign: 'center',
+                        color: 'white'
+                    }}>
+                        <div style={{
+                            fontSize: '16px',
+                            fontWeight: '700',
+                            letterSpacing: '0.5px'
+                        }}>
+                            www.planttech.co.in
+                        </div>
+                    </div>
+                </div>
+
                 {/* Navigation Button (optional - can be shown/hidden) */}
                 <div style={{
                     position: 'absolute',
