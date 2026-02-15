@@ -1,8 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 function Brochure() {
-    const navigate = useNavigate()
+
 
     return (
         <div style={{
@@ -176,22 +175,22 @@ function Brochure() {
                         marginBottom: '40px'
                     }}>
                         {[
-                            { name: 'Reaction Vessel', img: '/equipment-reactor.jpg' },
-                            { name: 'Pressure Vessel', img: '/equipment-distillation.jpg' },
-                            { name: 'Heat Exchanger', img: '/heat-exchanger.jpg' },
-                            { name: 'Distillation Column', img: '/equipment-distillation.jpg' },
-                            { name: 'Ribbon Blender', img: '/equipment-reactor.jpg' },
-                            { name: 'Octagonal Blender', img: '/equipment-distillation.jpg' },
-                            { name: 'Storage Tanks', img: '/equipment-storage.jpg' },
-                            { name: 'Limpet Reactor', img: '/heat-exchanger.jpg' },
-                            { name: 'Mass Mixer', img: '/equipment-reactor.jpg' },
-                            { name: 'Pneumatic Conveying', img: '/equipment-distillation.jpg' },
-                            { name: 'Agitator Nutsche Filter', img: '/equipment-storage.jpg' },
-                            { name: 'Powder Liquid Mixing', img: '/heat-exchanger.jpg' },
-                            { name: 'Screw Conveyor', img: '/equipment-reactor.jpg' },
-                            { name: 'Belt Conveyor', img: '/equipment-distillation.jpg' },
-                            { name: 'Wet Scrubber', img: '/equipment-storage.jpg' },
-                            { name: 'Vacuum Tray Dryer', img: '/heat-exchanger.jpg' }
+                            { name: 'Reaction Vessel', img: '/brochure-reaction-vessel.png' },
+                            { name: 'Pressure Vessel', img: '/brochure-pressure-vessel.png' },
+                            { name: 'Heat Exchanger', img: '/brochure-heat-exchanger.png' },
+                            { name: 'Distillation Column', img: '/brochure-distillation-column.png' },
+                            { name: 'Ribbon Blender', img: '/brochure-ribbon-blender.png' },
+                            { name: 'Octagonal Blender', img: '/brochure-octagonal-blender.png' },
+                            { name: 'Storage Tanks', img: '/brochure-storage-tanks.png' },
+                            { name: 'Limpet Reactor', img: '/brochure-limpet-reactor.png' },
+                            { name: 'Mass Mixer', img: '/brochure-mass-mixer.png' },
+                            { name: 'Pneumatic Conveying', img: '/brochure-pneumatic-conveying.png' },
+                            { name: 'Agitator Nutsche Filter', img: '/brochure-agitator-filter.png' },
+                            { name: 'Powder Liquid Mixing', img: '/brochure-powder-mixing.png' },
+                            { name: 'Screw Conveyor', img: '/brochure-screw-conveyor.png' },
+                            { name: 'Belt Conveyor', img: '/brochure-belt-conveyor.png' },
+                            { name: 'Wet Scrubber', img: '/brochure-wet-scrubber.png' },
+                            { name: 'Vacuum Tray Dryer', img: '/brochure-vacuum-dryer.png' }
                         ].map((equipment, index) => (
                             <div key={index} style={{
                                 background: 'white',
@@ -487,7 +486,7 @@ function Brochure() {
                     </div>
                 </div>
 
-                {/* PAGE 4: Contact Us - Modern Design */}
+                {/* PAGE 4: Turnkey Projects + Contact Footer */}
                 <div style={{
                     width: '210mm',
                     minHeight: '297mm',
@@ -495,78 +494,220 @@ function Brochure() {
                     boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
                     marginTop: '20px',
                     display: 'flex',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
+                    position: 'relative',
+                    overflow: 'hidden'
                 }}>
-                    {/* Company Logo and Name Section */}
+                    {/* Turnkey Projects Header */}
                     <div style={{
-                        textAlign: 'center',
-                        padding: '50px 40px 30px 40px',
-                        background: 'linear-gradient(135deg, #f9fafb 0%, #f0f9ff 100%)'
+                        background: 'linear-gradient(135deg, #0891b2 0%, #0e7490 100%)',
+                        padding: '20px 30px',
+                        textAlign: 'center'
                     }}>
-                        <img src="/PLANT_TECH_LOGO.png" alt="Planttech Logo" style={{
-                            height: '70px',
-                            width: 'auto',
-                            marginBottom: '20px'
-                        }} />
-                        <h1 style={{
-                            fontSize: '36px',
+                        <h2 style={{
+                            fontSize: '34px',
                             fontWeight: '900',
-                            margin: '0 0 8px 0',
-                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                            letterSpacing: '-0.5px'
+                            color: 'white',
+                            margin: 0,
+                            letterSpacing: '0.5px'
                         }}>
-                            PLANTTECH ENGINEERING PVT. LTD.
-                        </h1>
-                        <p style={{
-                            fontSize: '13px',
-                            color: '#6b7280',
-                            margin: '0 0 15px 0',
-                            fontWeight: '600'
-                        }}>
-                            ISO 9001:2015, MSME Certified Company
-                        </p>
+                            Turnkey Projects
+                        </h2>
                     </div>
 
-                    {/* Main Content - Contact Information */}
+                    {/* Turnkey Projects Content */}
                     <div style={{
                         flex: 1,
-                        padding: '40px',
-                        background: '#ffffff'
+                        padding: '25px 30px',
+                        display: 'flex',
+                        flexDirection: 'column'
                     }}>
-                        {/* Two Column Layout for Offices */}
+                        {/* Top Section: List + 2x2 images */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: '1fr 1.4fr',
+                            gap: '20px',
+                            marginBottom: '20px'
+                        }}>
+                            {/* Project List */}
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                paddingRight: '10px'
+                            }}>
+                                {[
+                                    'MicroBrewery',
+                                    'Essential Oil Extraction Plant',
+                                    'Solvent Recovery Plant',
+                                    'Dairy Plant',
+                                    'Wet Scrubber',
+                                    'Dust Extraction System',
+                                    'Ash Handling System',
+                                    'Used Oil Recycling Plant'
+                                ].map((project, idx) => (
+                                    <div key={idx} style={{
+                                        fontSize: '13px',
+                                        fontWeight: '600',
+                                        color: '#1f2937',
+                                        padding: '6px 0',
+                                        borderBottom: idx < 7 ? '1px solid #e5e7eb' : 'none',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px'
+                                    }}>
+                                        <span style={{
+                                            width: '8px',
+                                            height: '8px',
+                                            borderRadius: '50%',
+                                            background: '#0891b2',
+                                            flexShrink: 0
+                                        }}></span>
+                                        {project}
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Top 2x2 Project Images */}
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(2, 1fr)',
+                                gap: '10px'
+                            }}>
+                                {[
+                                    { name: 'Micro Brewery', img: '/brochure-reaction-vessel.png' },
+                                    { name: 'Essential Oil Extraction Plant', img: '/brochure-distillation-column.png' },
+                                    { name: 'Solvent Recovery Plant', img: '/brochure-heat-exchanger.png' },
+                                    { name: 'Dairy Plant', img: '/brochure-storage-tanks.png' }
+                                ].map((project, idx) => (
+                                    <div key={idx} style={{
+                                        borderRadius: '6px',
+                                        overflow: 'hidden',
+                                        border: '1px solid #e5e7eb',
+                                        boxShadow: '0 2px 6px rgba(0,0,0,0.08)'
+                                    }}>
+                                        <div style={{
+                                            height: '100px',
+                                            background: `#f8fafc url('${project.img}') center center / cover no-repeat`
+                                        }}></div>
+                                        <div style={{
+                                            padding: '6px',
+                                            textAlign: 'center',
+                                            fontSize: '10px',
+                                            fontWeight: '600',
+                                            color: '#374151',
+                                            background: '#f8fafc'
+                                        }}>
+                                            {project.name}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Bottom Row: 4 project images */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(4, 1fr)',
+                            gap: '10px',
+                            marginBottom: '25px'
+                        }}>
+                            {[
+                                { name: 'Wet Scrubber', img: '/brochure-wet-scrubber.png' },
+                                { name: 'Dust Extraction System', img: '/brochure-pneumatic-conveying.png' },
+                                { name: 'Ash Handling System', img: '/brochure-belt-conveyor.png' },
+                                { name: 'Used Oil Recycling Plant', img: '/brochure-mass-mixer.png' }
+                            ].map((project, idx) => (
+                                <div key={idx} style={{
+                                    borderRadius: '6px',
+                                    overflow: 'hidden',
+                                    border: '1px solid #e5e7eb',
+                                    boxShadow: '0 2px 6px rgba(0,0,0,0.08)'
+                                }}>
+                                    <div style={{
+                                        height: '100px',
+                                        background: `#f8fafc url('${project.img}') center center / cover no-repeat`
+                                    }}></div>
+                                    <div style={{
+                                        padding: '6px',
+                                        textAlign: 'center',
+                                        fontSize: '10px',
+                                        fontWeight: '600',
+                                        color: '#374151',
+                                        background: '#f8fafc'
+                                    }}>
+                                        {project.name}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Horizontal Divider */}
+                        <div style={{
+                            width: '100%',
+                            height: '3px',
+                            background: 'linear-gradient(90deg, #0891b2, #059669)',
+                            marginBottom: '25px'
+                        }}></div>
+
+                        {/* Contact Footer Section */}
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            marginBottom: '20px'
+                        }}>
+                            {/* Logo + Company Name */}
+                            <img src="/PLANT_TECH_LOGO.png" alt="Planttech Logo" style={{
+                                height: '60px',
+                                width: 'auto',
+                                marginBottom: '10px'
+                            }} />
+                            <h2 style={{
+                                fontSize: '26px',
+                                fontWeight: '900',
+                                color: '#0e7490',
+                                margin: '0 0 6px 0',
+                                letterSpacing: '0.5px'
+                            }}>
+                                PLANTTECH ENGINEERING PVT. LTD.
+                            </h2>
+                            <div style={{
+                                fontSize: '12px',
+                                fontWeight: '600',
+                                color: '#6b7280',
+                                padding: '4px 16px',
+                                background: '#f0f9ff',
+                                borderRadius: '12px',
+                                border: '1px solid #bfdbfe'
+                            }}>
+                                ISO 9001:2015, MSME Certified Company
+                            </div>
+                        </div>
+
+                        {/* Address + Contact Grid */}
                         <div style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
-                            gap: '30px',
-                            marginBottom: '40px'
+                            gap: '20px',
+                            marginBottom: '15px'
                         }}>
                             {/* Corporate Office */}
-                            <div style={{
-                                background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
-                                padding: '30px',
-                                borderRadius: '16px',
-                                border: '2px solid #bfdbfe'
-                            }}>
-                                <h3 style={{
-                                    fontSize: '18px',
-                                    fontWeight: '800',
-                                    color: '#1e3a8a',
-                                    margin: '0 0 15px 0',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '10px'
-                                }}>
-                                    <span style={{
-                                        fontSize: '24px'
-                                    }}>📍</span>
-                                    Corporate Office:
-                                </h3>
-                                <p style={{
+                            <div>
+                                <h4 style={{
                                     fontSize: '14px',
-                                    lineHeight: '1.8',
+                                    fontWeight: '800',
+                                    color: '#0e7490',
+                                    margin: '0 0 6px 0',
+                                    borderBottom: '2px solid #0891b2',
+                                    paddingBottom: '4px',
+                                    display: 'inline-block'
+                                }}>
+                                    Corporate Office:
+                                </h4>
+                                <p style={{
+                                    fontSize: '12px',
+                                    lineHeight: '1.6',
                                     color: '#374151',
                                     margin: 0,
                                     fontWeight: '500'
@@ -579,29 +720,21 @@ function Brochure() {
                             </div>
 
                             {/* Manufacturing Unit */}
-                            <div style={{
-                                background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
-                                padding: '30px',
-                                borderRadius: '16px',
-                                border: '2px solid #bfdbfe'
-                            }}>
-                                <h3 style={{
-                                    fontSize: '18px',
-                                    fontWeight: '800',
-                                    color: '#1e3a8a',
-                                    margin: '0 0 15px 0',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '10px'
-                                }}>
-                                    <span style={{
-                                        fontSize: '24px'
-                                    }}>🏭</span>
-                                    Manufacturing Unit:
-                                </h3>
-                                <p style={{
+                            <div>
+                                <h4 style={{
                                     fontSize: '14px',
-                                    lineHeight: '1.8',
+                                    fontWeight: '800',
+                                    color: '#0e7490',
+                                    margin: '0 0 6px 0',
+                                    borderBottom: '2px solid #0891b2',
+                                    paddingBottom: '4px',
+                                    display: 'inline-block'
+                                }}>
+                                    Manufacturing Unit:
+                                </h4>
+                                <p style={{
+                                    fontSize: '12px',
+                                    lineHeight: '1.6',
                                     color: '#374151',
                                     margin: 0,
                                     fontWeight: '500'
@@ -614,124 +747,71 @@ function Brochure() {
                             </div>
                         </div>
 
-                        {/* Email and Call Sections */}
+                        {/* Email + Call Row */}
                         <div style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
-                            gap: '30px',
-                            marginBottom: '30px'
+                            gap: '20px',
+                            marginBottom: '15px'
                         }}>
-                            {/* Email Us */}
-                            <div style={{
-                                background: 'white',
-                                padding: '25px',
-                                borderRadius: '12px',
-                                border: '2px solid #e5e7eb',
-                                boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
-                            }}>
-                                <h3 style={{
-                                    fontSize: '16px',
+                            <div>
+                                <h4 style={{
+                                    fontSize: '14px',
                                     fontWeight: '800',
-                                    color: '#1e3a8a',
-                                    margin: '0 0 12px 0',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '8px'
+                                    color: '#0e7490',
+                                    margin: '0 0 4px 0',
+                                    borderBottom: '2px solid #0891b2',
+                                    paddingBottom: '4px',
+                                    display: 'inline-block'
                                 }}>
-                                    <span style={{
-                                        fontSize: '20px'
-                                    }}>📧</span>
                                     Email Us:
-                                </h3>
-                                <div style={{
-                                    fontSize: '13px',
-                                    lineHeight: '2',
+                                </h4>
+                                <p style={{
+                                    fontSize: '11px',
+                                    lineHeight: '1.8',
                                     color: '#374151',
+                                    margin: 0,
                                     fontWeight: '500'
                                 }}>
-                                    <div>info.planttech.co.in</div>
-                                    <div>sales@planttech.co.in</div>
-                                    <div>parveen@planttech.co.in</div>
-                                    <div>planttechengineeringpvtltd@gmail.com</div>
-                                </div>
+                                    info@planttech.co.in, sales@planttech.co.in<br />
+                                    planttechengineeringpvtltd@gmail.com
+                                </p>
                             </div>
-
-                            {/* Call Us */}
-                            <div style={{
-                                background: 'white',
-                                padding: '25px',
-                                borderRadius: '12px',
-                                border: '2px solid #e5e7eb',
-                                boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
-                            }}>
-                                <h3 style={{
-                                    fontSize: '16px',
+                            <div>
+                                <h4 style={{
+                                    fontSize: '14px',
                                     fontWeight: '800',
-                                    color: '#1e3a8a',
-                                    margin: '0 0 12px 0',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '8px'
+                                    color: '#0e7490',
+                                    margin: '0 0 4px 0',
+                                    borderBottom: '2px solid #0891b2',
+                                    paddingBottom: '4px',
+                                    display: 'inline-block'
                                 }}>
-                                    <span style={{
-                                        fontSize: '20px'
-                                    }}>📞</span>
                                     Call Us:
-                                </h3>
-                                <div style={{
-                                    fontSize: '13px',
-                                    lineHeight: '2',
+                                </h4>
+                                <p style={{
+                                    fontSize: '12px',
+                                    lineHeight: '1.8',
                                     color: '#374151',
-                                    fontWeight: '500'
+                                    margin: 0,
+                                    fontWeight: '600'
                                 }}>
-                                    <div>+91-8130000846 (Sales)</div>
-                                    <div>+91-8840804180 (Purchase)</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Contact CTA Box */}
-                        <div style={{
-                            background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                            padding: '30px',
-                            borderRadius: '16px',
-                            textAlign: 'center',
-                            color: 'white',
-                            boxShadow: '0 8px 24px rgba(30, 58, 138, 0.3)'
-                        }}>
-                            <h3 style={{
-                                fontSize: '22px',
-                                fontWeight: '800',
-                                margin: '0 0 10px 0'
-                            }}>
-                                Ready to Transform Your Manufacturing?
-                            </h3>
-                            <p style={{
-                                fontSize: '14px',
-                                margin: '0 0 15px 0',
-                                opacity: '0.95'
-                            }}>
-                                Get in touch with our experts for customized solutions
-                            </p>
-                            <div style={{
-                                fontSize: '13px',
-                                fontWeight: '600',
-                                opacity: '0.9'
-                            }}>
-                                We provide end-to-end support from consultation to final commissioning
+                                    +91-8130000846 (Sales)<br />
+                                    +91-8840804180 (Purchase)
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Footer */}
+                    {/* Website Footer Bar */}
                     <div style={{
-                        background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                        padding: '20px',
+                        background: 'linear-gradient(135deg, #0891b2 0%, #0e7490 100%)',
+                        padding: '12px',
                         textAlign: 'center',
                         color: 'white'
                     }}>
                         <div style={{
-                            fontSize: '16px',
+                            fontSize: '14px',
                             fontWeight: '700',
                             letterSpacing: '0.5px'
                         }}>
@@ -740,39 +820,7 @@ function Brochure() {
                     </div>
                 </div>
 
-                {/* Navigation Button (optional - can be shown/hidden) */}
-                <div style={{
-                    position: 'absolute',
-                    top: '20px',
-                    right: '20px',
-                    zIndex: 10
-                }}>
-                    <button
-                        onClick={() => navigate('/')}
-                        style={{
-                            padding: '10px 20px',
-                            background: 'white',
-                            border: 'none',
-                            borderRadius: '8px',
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            color: '#1e3a8a',
-                            cursor: 'pointer',
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                            transition: 'all 0.3s ease'
-                        }}
-                        onMouseOver={(e) => {
-                            e.target.style.transform = 'translateY(-2px)'
-                            e.target.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)'
-                        }}
-                        onMouseOut={(e) => {
-                            e.target.style.transform = 'translateY(0)'
-                            e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
-                        }}
-                    >
-                        ← Back to Home
-                    </button>
-                </div>
+
             </div>
         </div>
     )
