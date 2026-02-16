@@ -11,7 +11,7 @@ function Brochure() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center'
+            gap: '20px'
         }}>
             {/* A4 Container - 210mm x 297mm = 793.7px x 1122.5px at 96 DPI */}
             <div style={{
@@ -146,7 +146,6 @@ function Brochure() {
                 minHeight: '297mm',
                 background: 'white',
                 boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
-                marginTop: '20px',
                 padding: '40px 30px'
             }}>
                 {/* Header */}
@@ -179,14 +178,14 @@ function Brochure() {
                     {[
                         { name: 'Reaction Vessel', img: '/brochure-reaction-vessel.png' },
                         { name: 'Pressure Vessel', img: '/brochure-pressure-vessel.png' },
-                        { name: 'Heat Exchanger', img: '/brochure-heat-exchanger.png' },
+                        { name: 'Condenser', img: '/brochure-heat-exchanger.png' },
                         { name: 'Distillation Column', img: '/brochure-distillation-column.png' },
                         { name: 'Ribbon Blender', img: '/brochure-ribbon-blender.png' },
                         { name: 'Octagonal Blender', img: '/brochure-octagonal-blender.png' },
                         { name: 'Storage Tanks', img: '/brochure-storage-tanks.png' },
                         { name: 'Limpet Reactor', img: '/brochure-limpet-reactor.png' },
                         { name: 'Mass Mixer', img: '/brochure-mass-mixer.png' },
-                        { name: 'Pneumatic Conveying', img: '/brochure-pneumatic-conveying.png' },
+                        { name: 'CIP System', img: '/brochure-pneumatic-conveying.png' },
                         { name: 'Agitator Nutsche Filter', img: '/brochure-agitator-filter.png' },
                         { name: 'Powder Liquid Mixing', img: '/brochure-powder-mixing.png' },
                         { name: 'Screw Conveyor', img: '/brochure-screw-conveyor.png' },
@@ -266,7 +265,7 @@ function Brochure() {
                             <div>✓ Process Equipment</div>
                             <div>✓ Reaction Vessel</div>
                             <div>✓ Pressure Vessel</div>
-                            <div>✓ Heat Exchanger</div>
+                            <div>✓ Condenser</div>
                             <div>✓ Distillation Column</div>
                             <div>✓ Ribbon Blender</div>
                         </div>
@@ -296,7 +295,6 @@ function Brochure() {
                 minHeight: '297mm',
                 background: 'white',
                 boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
-                marginTop: '20px',
                 overflow: 'hidden'
             }}>
                 {/* Hero Section with Gradient Background */}
@@ -494,7 +492,6 @@ function Brochure() {
                 height: '297mm',
                 background: 'white',
                 boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
-                marginTop: '20px',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
@@ -571,7 +568,7 @@ function Brochure() {
                                 Our Capabilities
                             </h3>
                             {[
-                                'MicroBrewery',
+                                'Herbal Extraction Plant',
                                 'Essential Oil Extraction Plant',
                                 'Solvent Recovery Plant',
                                 'Dairy Plant',
