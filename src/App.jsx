@@ -124,7 +124,6 @@ function Home() {
             <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a>
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => scrollToSection('projects')}>Projects</a>
-            <a href="/brochure" className="nav-link" onClick={(e) => { e.preventDefault(); window.location.href = '/brochure'; }}>Brochure</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>Contact</a>
           </div>
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -143,7 +142,7 @@ function Home() {
               <h1 className="hero-title">Engineering Excellence for Herbal, Nutraceutical, Pharma & Chemical Plants</h1>
               <p className="hero-subtitle">State-of-the-art process machinery serving industries worldwide from the foothills of the Himalayas</p>
               <div className="hero-buttons">
-                <button className="btn btn-primary" onClick={() => scrollToSection('about')}>Learn More</button>
+                <button className="btn btn-primary" onClick={() => window.location.href = '/download'}>Download Brochure</button>
                 <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>Get Quote</button>
               </div>
             </div>
@@ -340,59 +339,115 @@ function Home() {
           <div className="equipment-grid">
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-reactor.jpg" alt="Herbal Extraction Reactors" />
+                <img src="/brochure-reaction-vessel.png" alt="Reaction Vessel" />
               </div>
-              <h3>Herbal Extraction Reactors</h3>
-              <p>Multi-chamber, jacketed, vacuum-compatible, tailored for aroma/herbal oils</p>
+              <h3>Reaction Vessel</h3>
+              <p>Multi-chamber, jacketed, vacuum-compatible, tailored for chemical reactions</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-distillation.jpg" alt="Solvent Recovery Systems" />
+                <img src="/brochure-rotatory-extractor.png" alt="Rotary Extractor" />
               </div>
-              <h3>Solvent Recovery Systems</h3>
-              <p>High-efficiency distillation & condensation modules for solvent purity</p>
+              <h3>Rotary Extractor</h3>
+              <p>High-efficiency extraction system for herbal and pharmaceutical applications</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-distillation.jpg" alt="Distillation Columns" />
+                <img src="/brochure-heat-exchanger.png" alt="Condenser/Heat Exchanger" />
               </div>
-              <h3>Distillation Columns</h3>
+              <h3>Condenser/Heat Exchanger</h3>
+              <p>Shell & tube, coil type for efficient heat transfer and condensation</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-distillation-column.png" alt="Distillation Column" />
+              </div>
+              <h3>Distillation Column</h3>
               <p>Packed/tray columns for azeotropic & fractional distillation</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-distillation.jpg" alt="Condensers" />
+                <img src="/brochure-ribbon-blender.png" alt="Ribbon Blender" />
               </div>
-              <h3>Condensers</h3>
-              <p>Shell & tube, coil type, glass-lined for efficient heat transfer</p>
+              <h3>Ribbon Blender</h3>
+              <p>Efficient mixing equipment for uniform blending of powders</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-storage.jpg" alt="Storage Tanks" />
+                <img src="/brochure-octagonal-blender.png" alt="Octagonal Blender" />
+              </div>
+              <h3>Octagonal Blender</h3>
+              <p>Tumble blending system for gentle, homogeneous powder mixing</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-storage-tanks.png" alt="Storage Tanks" />
               </div>
               <h3>Storage Tanks</h3>
               <p>SS / food-grade with jacket options, CIP-friendly design</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-distillation.jpg" alt="Heat Exchangers" />
+                <img src="/brochure-limpet-reactor.png" alt="Limpet Reactor" />
               </div>
-              <h3>Heat Exchangers</h3>
-              <p>Plate, shell-tube, and spiral for heating/cooling fluids</p>
+              <h3>Limpet Reactor</h3>
+              <p>Jacketed reactor with limpet coil for precise temperature control</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-distillation.jpg" alt="Industrial Evaporators" />
+                <img src="/brochure-evaporator.png" alt="Evaporator" />
               </div>
-              <h3>Industrial Evaporators</h3>
-              <p>Falling-film, forced-circulation, thin-film for high concentration processes</p>
+              <h3>Evaporator</h3>
+              <p>Falling-film, forced-circulation systems for high concentration processes</p>
             </div>
             <div className="equipment-card">
               <div className="equipment-image">
-                <img src="/equipment-reactor.jpg" alt="Crystallizers" />
+                <img src="/brochure-pneumatic-conveying.png" alt="CIP System" />
               </div>
-              <h3>Crystallizers</h3>
-              <p>Advanced crystallization systems for high-purity product formation</p>
+              <h3>CIP System</h3>
+              <p>Clean-in-place automated cleaning systems for process equipment</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-agitator-filter.png" alt="Agitator Nutsche Filter" />
+              </div>
+              <h3>Agitator Nutsche Filter</h3>
+              <p>Integrated filtration and drying system for pharmaceutical processes</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-powder-mixing.png" alt="Powder Liquid Mixing" />
+              </div>
+              <h3>Powder Liquid Mixing</h3>
+              <p>High-speed mixing equipment for uniform powder-liquid blending</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-screw-conveyor.png" alt="Screw Conveyor" />
+              </div>
+              <h3>Screw Conveyor</h3>
+              <p>Helical screw mechanism for efficient material transport</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-belt-conveyor.jpg" alt="Belt Conveyor" />
+              </div>
+              <h3>Belt Conveyor</h3>
+              <p>Continuous belt system for bulk material handling</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-wet-scrubber.png" alt="Wet Scrubber" />
+              </div>
+              <h3>Wet Scrubber</h3>
+              <p>Gas cleaning equipment using liquid scrubbing for pollutant removal</p>
+            </div>
+            <div className="equipment-card">
+              <div className="equipment-image">
+                <img src="/brochure-vacuum-dryer.png" alt="Vacuum Tray Dryer" />
+              </div>
+              <h3>Vacuum Tray Dryer</h3>
+              <p>Low-temperature drying system for heat-sensitive materials</p>
             </div>
           </div>
         </div>
@@ -546,7 +601,18 @@ function Home() {
         <div className="container">
           <h2 className="section-title">Contact Us</h2>
           <div className="contact-content">
-            <div className="contact-info">
+            <div className="contact-info" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', marginBottom: '40px' }}>
+              {/* Row 1 - Corporate Office and Manufacturing Unit 1 */}
+              <div className="contact-item">
+                <i className="icon-location"></i>
+                <div>
+                  <h4>Corporate Office</h4>
+                  <p>Gali no.1, Uttam colony<br />
+                    Near post office, Jhajjar road<br />
+                    Bahadurgarh<br />
+                    Haryana, India - 124507</p>
+                </div>
+              </div>
               <div className="contact-item">
                 <i className="icon-location"></i>
                 <div>
@@ -557,6 +623,8 @@ function Home() {
                     Uttarakhand, India - 247663</p>
                 </div>
               </div>
+
+              {/* Row 2 - Manufacturing Unit 2 and Sales Inquiry */}
               <div className="contact-item">
                 <i className="icon-location"></i>
                 <div>
@@ -577,7 +645,9 @@ function Home() {
                     +91-8130000846</p>
                 </div>
               </div>
-              <div className="contact-item">
+
+              {/* Row 3 - Purchase Inquiry (single item, centered) */}
+              <div className="contact-item" style={{ gridColumn: '1 / -1', maxWidth: '50%', margin: '0 auto' }}>
                 <i className="icon-email"></i>
                 <div>
                   <h4>Purchase Inquiry</h4>
@@ -654,12 +724,22 @@ function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-content">
-            <div className="footer-logo">
-              <img src="/PLANT_TECH_LOGO.png" alt="Planttech Engineering Logo" className="logo" />
-              <span>Planttech Engineering Pvt. Ltd.</span>
+          <div className="footer-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+            <div>
+              <div className="footer-logo">
+                <img src="/PLANT_TECH_LOGO.png" alt="Planttech Engineering Logo" className="logo" />
+                <span>Planttech Engineering Pvt. Ltd.</span>
+              </div>
+              <p>&copy; 2024 Planttech Engineering Pvt. Ltd. All rights reserved.</p>
             </div>
-            <p>&copy; 2024 Planttech Engineering Pvt. Ltd. All rights reserved.</p>
+            <div style={{ textAlign: 'right' }}>
+              <p style={{ fontSize: '14px', color: '#32cd32', margin: '0' }}>
+                Designed by <strong style={{ color: '#32cd32' }}>Shreyansh Singh</strong>
+              </p>
+              <p style={{ fontSize: '13px', color: '#32cd32', margin: '4px 0 0 0' }}>
+                <a href="mailto:shreyanshmainmail@gmail.com" style={{ color: '#32cd32', textDecoration: 'none' }}>shreyanshmainmail@gmail.com</a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
