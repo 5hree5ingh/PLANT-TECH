@@ -580,9 +580,9 @@ function Home() {
             </div>
             <div className="project-card">
               <div className="project-image">
-                <img src="/suwasthi.jpg" alt="Suwasthi India" />
+                <img src="/JBLD.png" alt="JBLD" />
               </div>
-              <h3>Suwasthi India</h3>
+              <h3>JBLD</h3>
               <p>End-to-end plant solutions for herbal & wellness products</p>
             </div>
             <div className="project-card">
