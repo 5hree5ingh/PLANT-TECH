@@ -62,15 +62,7 @@ function Brochure() {
                         Engineering Excellence for Herbal, Nutraceutical, Pharma & Chemical Industries
                     </p>
 
-                    {/* Tagline */}
-                    <p style={{
-                        fontSize: '14px',
-                        margin: '0 0 25px 0',
-                        opacity: '0.95',
-                        lineHeight: '1.4'
-                    }}>
-                        State-of-the-art process machinery from the foothills of the Himalayas
-                    </p>
+
 
                     {/* Certification Badge */}
                     <div style={{
@@ -128,14 +120,27 @@ function Brochure() {
                         lineHeight: '2'
                     }}>
                         <p style={{ margin: '0 0 8px 0' }}>
-                            PHARMACEUTICALS • AGRO CHEMICAL • FOOD AND BEVERAGE • CHEMICALS
+                            HERBAL EXTRACTION • PHARMACEUTICALS • AGRO CHEMICAL • CHEMICALS
                         </p>
                         <p style={{ margin: '0 0 8px 0' }}>
                             PAINTING INDUSTRIES • DAIRY • REFINERY • POWER • CEMENT
                         </p>
-                        <p style={{ margin: '0' }}>
-                            SUGAR MILL • STEEL • OIL AND GAS • PAPER AND PULP
+                        <p style={{ margin: '0 0 20px 0' }}>
+                            SUGAR MILL • STEEL • OIL AND GAS • FOOD AND BEVERAGE
                         </p>
+
+                        {/* Website URL */}
+                        <div style={{
+                            background: 'rgba(255, 255, 255, 0.15)',
+                            padding: '10px 20px',
+                            borderRadius: '8px',
+                            display: 'inline-block',
+                            fontSize: '14px',
+                            fontWeight: '700',
+                            letterSpacing: '0.5px'
+                        }}>
+                            🌐 www.planttech.co.in
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,19 +182,19 @@ function Brochure() {
                 }}>
                     {[
                         { name: 'Reaction Vessel', img: '/brochure-reaction-vessel.png' },
-                        { name: 'Pressure Vessel', img: '/brochure-pressure-vessel.png' },
-                        { name: 'Condenser', img: '/brochure-heat-exchanger.png' },
+                        { name: 'Rotary Extractor', img: '/brochure-rotatory-extractor.png' },
+                        { name: 'Condenser/Heat Exchanger', img: '/brochure-heat-exchanger.png' },
                         { name: 'Distillation Column', img: '/brochure-distillation-column.png' },
                         { name: 'Ribbon Blender', img: '/brochure-ribbon-blender.png' },
                         { name: 'Octagonal Blender', img: '/brochure-octagonal-blender.png' },
                         { name: 'Storage Tanks', img: '/brochure-storage-tanks.png' },
                         { name: 'Limpet Reactor', img: '/brochure-limpet-reactor.png' },
-                        { name: 'Mass Mixer', img: '/brochure-mass-mixer.png' },
+                        { name: 'Evaporator', img: '/brochure-evaporator.png' },
                         { name: 'CIP System', img: '/brochure-pneumatic-conveying.png' },
                         { name: 'Agitator Nutsche Filter', img: '/brochure-agitator-filter.png' },
                         { name: 'Powder Liquid Mixing', img: '/brochure-powder-mixing.png' },
                         { name: 'Screw Conveyor', img: '/brochure-screw-conveyor.png' },
-                        { name: 'Belt Conveyor', img: '/brochure-belt-conveyor.png' },
+                        { name: 'Belt Conveyor', img: '/brochure-belt-conveyor.jpg' },
                         { name: 'Wet Scrubber', img: '/brochure-wet-scrubber.png' },
                         { name: 'Vacuum Tray Dryer', img: '/brochure-vacuum-dryer.png' }
                     ].map((equipment, index) => (
@@ -262,12 +267,13 @@ function Brochure() {
                         color: '#374151'
                     }}>
                         <div style={{ lineHeight: '2' }}>
-                            <div>✓ Process Equipment</div>
+                            <div>✓ Rotary Extractor</div>
                             <div>✓ Reaction Vessel</div>
                             <div>✓ Pressure Vessel</div>
                             <div>✓ Condenser</div>
                             <div>✓ Distillation Column</div>
                             <div>✓ Ribbon Blender</div>
+                            <div>✓ Agitated Thin Film Evaporator</div>
                         </div>
                         <div style={{ lineHeight: '2' }}>
                             <div>✓ Octagonal Blender</div>
@@ -276,6 +282,7 @@ function Brochure() {
                             <div>✓ Limpet Reactor</div>
                             <div>✓ Mass Mixer</div>
                             <div>✓ Agitator Nutsche Filter</div>
+                            <div>✓ Falling Film Evaporator</div>
                         </div>
                         <div style={{ lineHeight: '2' }}>
                             <div>✓ Powder, Liquid Mixing</div>
@@ -283,6 +290,7 @@ function Brochure() {
                             <div>✓ Belt Conveyor</div>
                             <div>✓ Wet Scrubber</div>
                             <div>✓ Vacuum Tray Dryer</div>
+                            <div>✓ Rising Film Evaporator</div>
                             <div>✓ And many more...</div>
                         </div>
                     </div>
@@ -476,12 +484,6 @@ function Brochure() {
                         }}>
                             Engineering Excellence Since Inception
                         </div>
-                        <div style={{
-                            fontSize: '14px',
-                            opacity: '0.95'
-                        }}>
-                            State-of-the-art process machinery from the foothills of the Himalayas
-                        </div>
                     </div>
                 </div>
             </div>
@@ -612,10 +614,10 @@ function Brochure() {
                             gap: '10px'
                         }}>
                             {[
-                                { name: 'Micro Brewery', img: '/brochure-reaction-vessel.png' },
-                                { name: 'Essential Oil Extraction Plant', img: '/brochure-distillation-column.png' },
-                                { name: 'Solvent Recovery Plant', img: '/brochure-heat-exchanger.png' },
-                                { name: 'Dairy Plant', img: '/brochure-storage-tanks.png' }
+                                { name: 'Herbal Extraction Plant ', img: '/herbal_extraction_plant.png' },
+                                { name: 'Essential Oil Extraction Plant', img: '/oil_extraction_plant.png' },
+                                { name: 'Solvent Recovery Plant', img: '/solvent_recovery_plant.png' },
+                                { name: 'Dairy Plant', img: '/Dairy_plant.png' }
                             ].map((project, idx) => (
                                 <div key={idx} style={{
                                     borderRadius: '8px',
@@ -660,9 +662,9 @@ function Brochure() {
                     }}>
                         {[
                             { name: 'Wet Scrubber', img: '/brochure-wet-scrubber.png' },
-                            { name: 'Dust Extraction System', img: '/brochure-pneumatic-conveying.png' },
-                            { name: 'Ash Handling System', img: '/brochure-belt-conveyor.png' },
-                            { name: 'Used Oil Recycling Plant', img: '/brochure-mass-mixer.png' }
+                            { name: 'Dust Extraction System', img: '/Dust_extraction.png' },
+                            { name: 'Ash Handling System', img: '/Ash_handler.png' },
+                            { name: 'Used Oil Recycling Plant', img: '/oil.png' }
                         ].map((project, idx) => (
                             <div key={idx} style={{
                                 borderRadius: '8px',
@@ -672,7 +674,7 @@ function Brochure() {
                             }}>
                                 <div style={{
                                     height: '100px',
-                                    background: `linear-gradient(180deg, rgba(30,58,138,0.03) 0%, rgba(5,150,105,0.03) 100%), #f8fafc url('${project.img}') center center / cover no-repeat`
+                                    background: `linear-gradient(180deg, rgba(30,58,138,0.03) 0%, rgba(5,150,105,0.03) 100%), #f8fafc url('${project.img}') center center / contain no-repeat`
                                 }}></div>
                                 <div style={{
                                     background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
@@ -901,7 +903,7 @@ function Brochure() {
                                     justifyContent: 'center',
                                     fontSize: '10px'
                                 }}>📞</span>
-                                Call Us
+                                Sales Enquiry
                             </h4>
                             <p style={{
                                 fontSize: '11px',
@@ -910,8 +912,9 @@ function Brochure() {
                                 opacity: 0.9,
                                 fontWeight: '600'
                             }}>
-                                +91-8130000846 (Sales)<br />
-                                +91-8840804180 (Purchase)
+                                +91-8130000846 <br />
+                                +91-8840804180 <br />
+                                +91-7503322415
                             </p>
                         </div>
                     </div>
