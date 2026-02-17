@@ -16,26 +16,29 @@ function Brochure() {
             {/* A4 Container - 210mm x 297mm = 793.7px x 1122.5px at 96 DPI */}
             <div style={{
                 width: '210mm',
-                minHeight: '297mm',
+                height: '297mm',
                 background: 'white',
                 boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column'
             }}>
                 {/* Header Section with Gradient */}
                 <div style={{
                     background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                    padding: '40px 30px',
+                    padding: '42px 35px',
                     textAlign: 'center',
                     color: 'white',
-                    position: 'relative'
+                    position: 'relative',
+                    flexShrink: 0
                 }}>
                     {/* Company Logo */}
                     <div style={{
-                        marginBottom: '20px'
+                        marginBottom: '22px'
                     }}>
                         <img src="/PLANT_TECH_LOGO.png" alt="Planttech Logo" style={{
-                            height: '80px',
+                            height: '82px',
                             width: 'auto',
                             filter: 'brightness(0) invert(1)'
                         }} />
@@ -43,9 +46,9 @@ function Brochure() {
 
                     {/* Company Name */}
                     <h1 style={{
-                        fontSize: '42px',
+                        fontSize: '43px',
                         fontWeight: '800',
-                        margin: '0 0 15px 0',
+                        margin: '0 0 16px 0',
                         letterSpacing: '-0.5px',
                         lineHeight: '1.2'
                     }}>
@@ -54,10 +57,10 @@ function Brochure() {
 
                     {/* Subtitle */}
                     <p style={{
-                        fontSize: '16px',
+                        fontSize: '16.5px',
                         fontWeight: '500',
-                        margin: '0 0 8px 0',
-                        lineHeight: '1.4'
+                        margin: '0 0 18px 0',
+                        lineHeight: '1.5'
                     }}>
                         Engineering Excellence for Herbal, Nutraceutical, Pharma & Chemical Industries
                     </p>
@@ -67,11 +70,11 @@ function Brochure() {
                     {/* Certification Badge */}
                     <div style={{
                         display: 'inline-block',
-                        padding: '12px 28px',
+                        padding: '13px 30px',
                         background: 'rgba(255, 255, 255, 0.2)',
                         border: '2px solid rgba(255, 255, 255, 0.4)',
                         borderRadius: '25px',
-                        fontSize: '14px',
+                        fontSize: '14.5px',
                         fontWeight: '600',
                         letterSpacing: '0.5px'
                     }}>
@@ -81,7 +84,8 @@ function Brochure() {
 
                 {/* Hero Image Section */}
                 <div style={{
-                    height: '400px',
+                    flex: 1,
+                    minHeight: '410px',
                     background: 'linear-gradient(rgba(30, 58, 138, 0.1), rgba(5, 150, 105, 0.1)), url("/hero-plant.jpg") center center / cover no-repeat',
                     position: 'relative'
                 }}>
@@ -91,14 +95,15 @@ function Brochure() {
                 {/* Sectors We Serve Section */}
                 <div style={{
                     background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                    padding: '35px 30px',
+                    padding: '38px 35px',
                     color: 'white',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    flexShrink: 0
                 }}>
                     <h2 style={{
-                        fontSize: '32px',
+                        fontSize: '33px',
                         fontWeight: '800',
-                        margin: '0 0 8px 0',
+                        margin: '0 0 9px 0',
                         letterSpacing: '1px'
                     }}>
                         SECTORS WE SERVE
@@ -106,36 +111,36 @@ function Brochure() {
 
                     {/* Decorative underline */}
                     <div style={{
-                        width: '80px',
+                        width: '85px',
                         height: '4px',
                         background: 'white',
-                        margin: '0 auto 25px auto'
+                        margin: '0 auto 26px auto'
                     }}></div>
 
                     {/* Sectors List */}
                     <div style={{
-                        fontSize: '13px',
+                        fontSize: '13.5px',
                         fontWeight: '600',
                         letterSpacing: '0.5px',
-                        lineHeight: '2'
+                        lineHeight: '2.1'
                     }}>
-                        <p style={{ margin: '0 0 8px 0' }}>
+                        <p style={{ margin: '0 0 9px 0' }}>
                             HERBAL EXTRACTION • PHARMACEUTICALS • AGRO CHEMICAL • CHEMICALS
                         </p>
-                        <p style={{ margin: '0 0 8px 0' }}>
+                        <p style={{ margin: '0 0 9px 0' }}>
                             PAINTING INDUSTRIES • DAIRY • REFINERY • POWER • CEMENT
                         </p>
-                        <p style={{ margin: '0 0 20px 0' }}>
+                        <p style={{ margin: '0 0 23px 0' }}>
                             SUGAR MILL • STEEL • OIL AND GAS • FOOD AND BEVERAGE
                         </p>
 
                         {/* Website URL */}
                         <div style={{
                             background: 'rgba(255, 255, 255, 0.15)',
-                            padding: '10px 20px',
+                            padding: '11px 22px',
                             borderRadius: '8px',
                             display: 'inline-block',
-                            fontSize: '14px',
+                            fontSize: '14.5px',
                             fontWeight: '700',
                             letterSpacing: '0.5px'
                         }}>
