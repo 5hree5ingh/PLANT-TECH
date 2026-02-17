@@ -300,22 +300,26 @@ function Brochure() {
             {/* PAGE 3: About Us - REDESIGNED */}
             <div style={{
                 width: '210mm',
-                minHeight: '297mm',
+                height: '297mm',
                 background: 'white',
                 boxShadow: '0 10px 50px rgba(0,0,0,0.2)',
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
                 overflow: 'hidden'
             }}>
                 {/* Hero Section with Gradient Background */}
                 <div style={{
                     background: 'linear-gradient(135deg, #1e3a8a 0%, #0c7490 50%, #059669 100%)',
-                    padding: '45px 40px',
+                    padding: '38px 40px',
                     color: 'white',
-                    position: 'relative'
+                    position: 'relative',
+                    flexShrink: 0
                 }}>
                     <h2 style={{
-                        fontSize: '42px',
+                        fontSize: '39px',
                         fontWeight: '900',
-                        margin: '0 0 15px 0',
+                        margin: '0 0 13px 0',
                         letterSpacing: '-1px',
                         textAlign: 'center'
                     }}>
@@ -323,19 +327,19 @@ function Brochure() {
                     </h2>
 
                     <div style={{
-                        width: '100px',
+                        width: '95px',
                         height: '4px',
                         background: 'white',
-                        margin: '0 auto 25px auto'
+                        margin: '0 auto 22px auto'
                     }}></div>
 
                     <p style={{
-                        fontSize: '16px',
-                        lineHeight: '1.8',
+                        fontSize: '14.5px',
+                        lineHeight: '1.75',
                         textAlign: 'center',
-                        margin: '0 0 30px 0',
+                        margin: '0 0 27px 0',
                         opacity: '0.95',
-                        maxWidth: '85%',
+                        maxWidth: '88%',
                         marginLeft: 'auto',
                         marginRight: 'auto'
                     }}>
@@ -346,8 +350,8 @@ function Brochure() {
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: '25px',
-                        marginTop: '30px'
+                        gap: '26px',
+                        marginTop: '23px'
                     }}>
                         {[
                             { number: 'ISO 9001:2015', label: 'Certified' },
@@ -356,13 +360,13 @@ function Brochure() {
                         ].map((stat, index) => (
                             <div key={index} style={{
                                 textAlign: 'center',
-                                padding: '20px',
+                                padding: '21px',
                                 background: 'rgba(255, 255, 255, 0.15)',
                                 borderRadius: '12px',
                                 backdropFilter: 'blur(10px)'
                             }}>
                                 <div style={{
-                                    fontSize: '20px',
+                                    fontSize: '19px',
                                     fontWeight: '800',
                                     marginBottom: '5px'
                                 }}>
@@ -382,14 +386,18 @@ function Brochure() {
 
                 {/* Main Content Section */}
                 <div style={{
-                    padding: '40px'
+                    padding: '38px 40px',
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    overflow: 'hidden'
                 }}>
                     {/* Why Choose Us Section */}
                     <h3 style={{
-                        fontSize: '32px',
+                        fontSize: '29px',
                         fontWeight: '800',
                         textAlign: 'center',
-                        marginBottom: '12px',
+                        marginBottom: '11px',
                         background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -400,9 +408,9 @@ function Brochure() {
 
                     <p style={{
                         textAlign: 'center',
-                        fontSize: '14px',
+                        fontSize: '13.5px',
                         color: '#6b7280',
-                        marginBottom: '35px'
+                        marginBottom: '29px'
                     }}>
                         Comprehensive solutions for your industrial needs
                     </p>
@@ -411,8 +419,8 @@ function Brochure() {
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: '18px',
-                        marginBottom: '35px'
+                        gap: '17px',
+                        marginBottom: '29px'
                     }}>
                         {[
                             { title: 'Industry Experts', desc: 'Product & machinery specialists' },
@@ -427,30 +435,30 @@ function Brochure() {
                         ].map((feature, index) => (
                             <div key={index} style={{
                                 textAlign: 'center',
-                                padding: '20px 15px',
+                                padding: '17px 13px',
                                 background: 'linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%)',
                                 borderRadius: '12px',
                                 border: '2px solid #e0f2fe',
                                 transition: 'transform 0.3s ease'
                             }}>
                                 <div style={{
-                                    width: '50px',
-                                    height: '50px',
-                                    margin: '0 auto 12px auto',
+                                    width: '46px',
+                                    height: '46px',
+                                    margin: '0 auto 11px auto',
                                     borderRadius: '50%',
                                     background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     color: 'white',
-                                    fontSize: '24px',
+                                    fontSize: '21px',
                                     fontWeight: 'bold',
                                     boxShadow: '0 4px 12px rgba(30, 58, 138, 0.25)'
                                 }}>
                                     ✓
                                 </div>
                                 <div style={{
-                                    fontSize: '13px',
+                                    fontSize: '12px',
                                     fontWeight: '700',
                                     color: '#1e3a8a',
                                     marginBottom: '4px'
@@ -458,7 +466,7 @@ function Brochure() {
                                     {feature.title}
                                 </div>
                                 <div style={{
-                                    fontSize: '11px',
+                                    fontSize: '10px',
                                     color: '#6b7280',
                                     lineHeight: '1.4'
                                 }}>
@@ -471,16 +479,16 @@ function Brochure() {
                     {/* Bottom CTA Section */}
                     <div style={{
                         background: 'linear-gradient(135deg, #1e3a8a 0%, #059669 100%)',
-                        padding: '25px',
-                        borderRadius: '16px',
+                        padding: '24px',
+                        borderRadius: '15px',
                         textAlign: 'center',
                         color: 'white',
                         boxShadow: '0 8px 24px rgba(30, 58, 138, 0.3)'
                     }}>
                         <div style={{
-                            fontSize: '24px',
+                            fontSize: '23px',
                             fontWeight: '800',
-                            marginBottom: '8px'
+                            margin: '0'
                         }}>
                             Engineering Excellence Since Inception
                         </div>
