@@ -462,55 +462,73 @@ function Home() {
           <div className="gallery-grid">
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/equipment-reactor.jpg" alt="Herbal Extraction Reactors" />
+                <img src="/NEWIMAGE/IMG_5096.JPG.jpeg" alt="Manufacturing Facility" />
                 <div className="gallery-overlay">
-                  <h3>Herbal Extraction Reactors</h3>
-                  <p>Multi-chamber, jacketed, vacuum-compatible reactors</p>
+                  <h3>State-of-the-art Manufacturing Facility</h3>
+                  <p>Our modern production plant in Haridwar, Uttarakhand</p>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/equipment-distillation.jpg" alt="Distillation Equipment" />
+                <img src="/NEWIMAGE/IMG_5098.JPG.jpeg" alt="Corporate Office" />
                 <div className="gallery-overlay">
-                  <h3>Distillation Equipment</h3>
-                  <p>High-efficiency distillation & condensation systems</p>
+                  <h3>Corporate Office & Technical Hub</h3>
+                  <p>Where innovation meets precision engineering</p>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/equipment-storage.jpg" alt="Storage Tanks" />
+                <img src="/NEWIMAGE/IMG_5081.JPG.jpeg" alt="Turnkey Plant" />
                 <div className="gallery-overlay">
-                  <h3>Storage Tanks</h3>
-                  <p>SS / food-grade storage with jacket options</p>
+                  <h3>Large-Scale Turnkey Processing Plant</h3>
+                  <p>Comprehensive solutions for botanical and herbal extraction</p>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/heat-exchanger.jpg" alt="Heat Exchangers" />
+                <img src="/NEWIMAGE/IMG_5083.JPG.jpeg" alt="Reaction Units" />
                 <div className="gallery-overlay">
-                  <h3>Heat Exchangers</h3>
-                  <p>Plate, shell-tube, and spiral heat exchangers</p>
+                  <h3>Industrial Reaction & Distillation Units</h3>
+                  <p>High-performance equipment for liquid-solid extraction</p>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/hero-plant.jpg" alt="Manufacturing Plant" />
+                <img src="/NEWIMAGE/IMG_5069.JPG.jpeg" alt="QC Laboratory" />
                 <div className="gallery-overlay">
-                  <h3>Manufacturing Plant</h3>
-                  <p>Our state-of-the-art production facility</p>
+                  <h3>Modern Quality Control Laboratory</h3>
+                  <p>Rigorous testing to ensure the highest machinery standards</p>
                 </div>
               </div>
             </div>
             <div className="gallery-item">
               <div className="gallery-image">
-                <img src="/equipment-reactor.jpg" alt="Process Equipment" />
+                <img src="/NEWIMAGE/IMG_5078.JPG.jpeg" alt="Testing Center" />
                 <div className="gallery-overlay">
-                  <h3>Process Equipment</h3>
-                  <p>Advanced processing machinery for various industries</p>
+                  <h3>Precision Testing & Analysis Center</h3>
+                  <p>Equipped with advanced instruments for process validation</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/NEWIMAGE/IMG_5092.JPG.jpeg" alt="Boiler Systems" />
+                <div className="gallery-overlay">
+                  <h3>Advanced Boiler & Filtration Systems</h3>
+                  <p>Critical utility components for seamless plant operations</p>
+                </div>
+              </div>
+            </div>
+            <div className="gallery-item">
+              <div className="gallery-image">
+                <img src="/NEWIMAGE/vaccumtray.png" alt="Vacuum Tray Dryer" />
+                <div className="gallery-overlay">
+                  <h3>Industrial Vacuum Tray Dryer</h3>
+                  <p>Advanced low-temperature drying system for heat-sensitive products</p>
                 </div>
               </div>
             </div>
