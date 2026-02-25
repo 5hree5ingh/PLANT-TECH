@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 function Brochure() {
-    const [zoom, setZoom] = useState(100)
+    const [zoom, setZoom] = useState(50)
     const [currentPage, setCurrentPage] = useState(1)
     const [showScrollTop, setShowScrollTop] = useState(false)
     const totalPages = 4

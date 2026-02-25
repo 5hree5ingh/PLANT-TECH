@@ -143,8 +143,8 @@ function Home() {
               <h1 className="hero-title">Engineering Excellence for Herbal, Nutraceutical, Pharma & Chemical Plants</h1>
               <p className="hero-subtitle">State-of-the-art process machinery serving industries worldwide from the foothills of the Himalayas</p>
               <div className="hero-buttons">
-                <button className="btn btn-primary" onClick={() => window.location.href = '/download'}>Download Brochure</button>
-                <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>Get Quote</button>
+                <button className="btn btn-primary" onClick={() => window.location.href = '/brochure'}>Download Brochure</button>
+                <button className="btn btn-secondary" onClick={() => window.location.href = 'https://wa.me/918130000846?text=Hello%20Planttech%20Engineering!%20I\'m%20interested%20in%20your%20process%20machinery%20and%20turnkey%20solutions.%20Could%20you%20provide%20me%20with%20more%20information%20and%20a%20quote%3F'}>Get Quote</button>
               </div>
             </div>
           </div>
@@ -647,8 +647,8 @@ function Home() {
                 </div>
               </div>
 
-              {/* Row 3 - Purchase Inquiry (single item, centered) */}
-              <div className="contact-item" style={{ gridColumn: '1 / -1', maxWidth: '50%', margin: '0 auto' }}>
+              {/* Row 3 - Purchase Inquiry (full width) */}
+              <div className="contact-item" style={{ gridColumn: '1 / -1' }}>
                 <i className="icon-email"></i>
                 <div>
                   <h4>Purchase Inquiry</h4>
