@@ -122,7 +122,7 @@ function Home() {
             <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} onClick={() => scrollToSection('about')}>About</a>
             <a href="#products" className={`nav-link ${activeSection === 'products' ? 'active' : ''}`} onClick={() => scrollToSection('products')}>Products</a>
             <a href="#equipment" className={`nav-link ${activeSection === 'equipment' ? 'active' : ''}`} onClick={() => scrollToSection('equipment')}>Equipment</a>
-            <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a>
+            {/* <a href="#gallery" className={`nav-link ${activeSection === 'gallery' ? 'active' : ''}`} onClick={() => scrollToSection('gallery')}>Gallery</a> */}
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => scrollToSection('projects')}>Projects</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>Contact</a>
@@ -454,7 +454,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* 
       <section id="gallery" className="gallery">
         <div className="container">
           <h2 className="section-title">Factory Gallery</h2>
@@ -535,6 +535,7 @@ function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Team Section */}
       <section id="team" className="team">
@@ -551,7 +552,7 @@ function Home() {
             </div>
             <div className="team-member" style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/vipul-upadhyay-932b5594/', '_blank')}>
               <div className="member-avatar">
-                <img src="/vipul.jpeg" alt="Mr. Vipul" />
+                <img src="/VIPUL.png" alt="Mr. Vipul" />
               </div>
               <h3>Mr. Vipul Upadhyay</h3>
               <p className="member-role">M. Pharma, 16 years' experience</p>
