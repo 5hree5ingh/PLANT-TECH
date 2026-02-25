@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 function Brochure() {
-    const [zoom, setZoom] = useState(50)
+    const [zoom, setZoom] = useState(120)
     const [currentPage, setCurrentPage] = useState(1)
     const [showScrollTop, setShowScrollTop] = useState(false)
     const totalPages = 4
@@ -82,8 +82,8 @@ function Brochure() {
                     <div style={{ width: '1px', height: '28px', background: 'rgba(255,255,255,0.3)', margin: '0 4px' }} />
 
                     <a
-                        href="/Planttech-Brochure.pdf"
-                        download
+                        href="/PLANTTECH.pdf"
+                        download="PLANTTECH.pdf"
                         style={{ textDecoration: 'none' }}
                     >
                         <button style={{ ...toolBtn, background: 'rgba(255,255,255,0.95)', color: '#1e3a8a', fontWeight: '800', padding: '8px 16px' }}>
@@ -924,8 +924,10 @@ function Brochure() {
                                             fontWeight: '500'
                                         }}>
                                             Khasara No. 587, Akbarpuruood<br />
-                                            Behind Shree Cement, Lakshar Road<br />
-                                            Lakshar, Haridwar, Uttarakhand - 247663
+                                            Behind Shree Cement<br />
+                                            Laksar Road<br />
+                                            Lakshar, Haridwar<br />
+                                            Uttarakhand, India - 247663
                                         </p>
                                     </div>
                                     <div style={{

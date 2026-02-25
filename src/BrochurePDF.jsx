@@ -448,7 +448,8 @@ function BrochurePDF() {
                                 <Text style={S.p4AddrTitle}>🏢 Corporate Office</Text>
                                 <Text style={S.p4AddrText}>
                                     Khasara No. 587, Akbarpuruood{'\n'}
-                                    Behind Shree Cement, Lakshar Road{'\n'}
+                                    Behind Shree Cement{'\n'}
+                                    Laksar Road{'\n'}
                                     Lakshar, Haridwar, Uttarakhand - 247663
                                 </Text>
                             </View>

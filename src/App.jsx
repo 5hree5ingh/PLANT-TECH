@@ -143,8 +143,8 @@ function Home() {
               <h1 className="hero-title">Engineering Excellence for Herbal, Nutraceutical, Pharma & Chemical Plants</h1>
               <p className="hero-subtitle">State-of-the-art process machinery serving industries worldwide from the foothills of the Himalayas</p>
               <div className="hero-buttons">
-                <button className="btn btn-primary" onClick={() => window.location.href = '/brochure'}>Download Brochure</button>
-                <button className="btn btn-secondary" onClick={() => window.location.href = 'https://wa.me/918130000846?text=Hello%20Planttech%20Engineering!%20I\'m%20interested%20in%20your%20process%20machinery%20and%20turnkey%20solutions.%20Could%20you%20provide%20me%20with%20more%20information%20and%20a%20quote%3F'}>Get Quote</button>
+                <button className="btn btn-primary" onClick={() => window.open('/brochure', '_blank')}>Download Brochure</button>
+                <button className="btn btn-secondary" onClick={() => window.open('https://wa.me/918130000846?text=Hello%20Planttech%20Engineering!%20I\'m%20interested%20in%20your%20process%20machinery%20and%20turnkey%20solutions.%20Could%20you%20provide%20me%20with%20more%20information%20and%20a%20quote%3F', '_blank')}>Get Quote</button>
               </div>
             </div>
           </div>
@@ -619,7 +619,8 @@ function Home() {
                 <div>
                   <h4>Manufacturing Unit 1</h4>
                   <p>Khasara No. 587, Akbarpuruood<br />
-                    Behind Shree Cement, Lakshar Road<br />
+                    Behind Shree Cement<br />
+                    Laksar Road<br />
                     Lakshar, Haridwar<br />
                     Uttarakhand, India - 247663</p>
                 </div>

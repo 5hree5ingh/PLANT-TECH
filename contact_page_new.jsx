@@ -139,7 +139,8 @@
                     fontWeight: '500'
                 }}>
                     Khasara No. 587, Akbarpuruood<br />
-                    Behind Shree Cement, Lakshar Road<br />
+                    Behind Shree Cement<br />
+                    Laksar Road<br />
                     Lakshar, Haridwar<br />
                     Uttarakhand, India - 247663
                 </p>

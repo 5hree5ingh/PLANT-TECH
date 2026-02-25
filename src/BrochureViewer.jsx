@@ -63,7 +63,7 @@ function BrochureViewer() {
                 {/* Download Button */}
                 <PDFDownloadLink
                     document={<BrochurePDF />}
-                    fileName="Planttech-Engineering-Brochure.pdf"
+                    fileName="PLANTTECH.pdf"
                     style={{ textDecoration: 'none' }}
                 >
                     {({ loading }) => (
