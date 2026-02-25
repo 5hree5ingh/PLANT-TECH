@@ -105,7 +105,7 @@ function Download() {
                     }}>
                         📥 <strong>Check your downloads folder</strong> for the PDF
                         <br />
-                        📧 Questions? Contact us at <strong>info.planttech.co.in</strong>
+                        📧 Questions? Contact us at <strong>info@planttech.co.in</strong>
                         <br />
                         📞 Call us: <strong>+91-8130000846</strong>
                     </p>

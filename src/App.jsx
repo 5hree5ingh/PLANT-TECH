@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Download from './Download'
 import Brochure from './Brochure'
+import BrochureViewer from './BrochureViewer'
 import './App.css'
 
 
@@ -652,7 +653,7 @@ function Home() {
                 <div>
                   <h4>Purchase Inquiry</h4>
                   <p>planttechengineeringpvtltd@gmail.com<br />
-                    info.planttech.co.in<br />
+                    info@planttech.co.in<br />
                     +91-8840804180</p>
                 </div>
               </div>
@@ -753,6 +754,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/download" element={<Download />} />
       <Route path="/brochure" element={<Brochure />} />
+      <Route path="/brochure-pdf" element={<BrochureViewer />} />
     </Routes>
   )
 }

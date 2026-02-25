@@ -273,7 +273,7 @@
                     color: '#0891b2',
                     fontWeight: '600'
                 }}>
-                    <div>info.planttech.co.in</div>
+                    <div>info@planttech.co.in</div>
                     <div>sales@planttech.co.in</div>
                     <div>parveen@planttech.co.in</div>
                     <div>planttechengineeringpvtltd@gmail.com</div>
