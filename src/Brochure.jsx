@@ -29,7 +29,11 @@ function Brochure() {
 
     const goToPage = (n) => {
         const el = pageRefs.current[n - 1]
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        if (el) {
+            const TOOLBAR_OFFSET = 100 // sticky toolbar (~52px) + page-jump bar (~38px) + a little breathing room
+            const top = el.getBoundingClientRect().top + window.scrollY - TOOLBAR_OFFSET
+            window.scrollTo({ top, behavior: 'smooth' })
+        }
     }
 
     return (
