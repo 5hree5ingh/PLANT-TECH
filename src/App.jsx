@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Download from './Download'
 import Brochure from './Brochure'
 import BrochureViewer from './BrochureViewer'
+import BrochurePage4 from './BrochurePage4'
 import './App.css'
 
 
@@ -775,6 +776,7 @@ function App() {
       <Route path="/download" element={<Download />} />
       <Route path="/brochure" element={<Brochure />} />
       <Route path="/brochure-pdf" element={<BrochureViewer />} />
+      <Route path="/brochure-page4" element={<BrochurePage4 />} />
     </Routes>
   )
 }
