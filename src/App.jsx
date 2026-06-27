@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Download from './Download'
 import Brochure from './Brochure'
@@ -22,7 +22,7 @@ function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'products', 'equipment', 'gallery', 'team', 'projects', 'contact']
+      const sections = ['home', 'about', 'products', 'equipment', 'gallery', 'team', 'projects', 'completed-projects', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -581,39 +581,87 @@ function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="projects">
+      <section id="projects" className="projects-section">
         <div className="container">
-          <h2 className="section-title">Current Working Projects</h2>
-          <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-image">
-                <img src="/monard.png" alt="Monard Industries" />
-              </div>
-              <h3>Monard Industries</h3>
-              <p>Turnkey herbal extraction & processing setup</p>
+          <h2 className="section-title">Our Projects</h2>
+
+          {/* Ongoing Projects */}
+          <div className="projects-subsection">
+            <div className="subsection-header">
+              <span className="status-dot ongoing-dot"></span>
+              <h3 className="subsection-title">Ongoing Projects</h3>
             </div>
-            <div className="project-card">
-              <div className="project-image">
-                <img src="/himalayan.jpg" alt="Himalayan Nutraceuticals" />
+            <div className="projects-showcase">
+              <div className="showcase-card">
+                <div className="card-status ongoing">
+                  <span className="status-pulse"></span>
+                  Ongoing
+                </div>
+                <div className="showcase-logo">
+                  <img src="/forace.png" alt="Forace" />
+                </div>
+                <div className="showcase-info">
+                  <h4>Forace</h4>
+                </div>
               </div>
-              <h3>Himalayan Nutraceuticals</h3>
-              <p>Customized machinery for natural actives & formulations</p>
-            </div>
-            <div className="project-card">
-              <div className="project-image">
-                <img src="/JBLD.png" alt="JBLD" />
+              <div className="showcase-card">
+                <div className="card-status ongoing">
+                  <span className="status-pulse"></span>
+                  Ongoing
+                </div>
+                <div className="showcase-logo">
+                  <img src="/himalayan.jpg" alt="Himalayan Nutraceuticals" />
+                </div>
+                <div className="showcase-info">
+                  <h4>Himalayan Nutraceuticals</h4>
+                </div>
               </div>
-              <h3>JBLD</h3>
-              <p>End-to-end plant solutions for herbal & wellness products</p>
-            </div>
-            <div className="project-card">
-              <div className="project-image">
-                <img src="/bharat-rasayan.png" alt="Bharat Rasayan" />
-              </div>
-              <h3>Bharat Rasayan</h3>
-              <p>Comprehensive herbal processing & extraction solutions</p>
             </div>
           </div>
+
+          {/* Completed Projects */}
+          <div className="projects-subsection" id="completed-projects">
+            <div className="subsection-header">
+              <span className="status-dot completed-dot"></span>
+              <h3 className="subsection-title">Successfully Completed</h3>
+            </div>
+            <div className="projects-showcase">
+              <div className="showcase-card done">
+                <div className="card-status completed">
+                  ✓ Completed
+                </div>
+                <div className="showcase-logo">
+                  <img src="/monard.png" alt="Monard Industries" />
+                </div>
+                <div className="showcase-info">
+                  <h4>Monard Industries</h4>
+                </div>
+              </div>
+              <div className="showcase-card done">
+                <div className="card-status completed">
+                  ✓ Completed
+                </div>
+                <div className="showcase-logo">
+                  <img src="/JBLD.png" alt="JBLD" />
+                </div>
+                <div className="showcase-info">
+                  <h4>JBLD</h4>
+                </div>
+              </div>
+              <div className="showcase-card done">
+                <div className="card-status completed">
+                  ✓ Completed
+                </div>
+                <div className="showcase-logo">
+                  <img src="/bharat-rasayan.png" alt="Bharat Rasayan" />
+                </div>
+                <div className="showcase-info">
+                  <h4>Bharat Rasayan</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
