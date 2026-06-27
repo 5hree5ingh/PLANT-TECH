@@ -4,6 +4,7 @@ import Download from './Download'
 import Brochure from './Brochure'
 import BrochureViewer from './BrochureViewer'
 import BrochurePage4 from './BrochurePage4'
+import Careers from './Careers'
 import './App.css'
 
 
@@ -127,6 +128,7 @@ function Home() {
             <a href="#team" className={`nav-link ${activeSection === 'team' ? 'active' : ''}`} onClick={() => scrollToSection('team')}>Team</a>
             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => scrollToSection('projects')}>Projects</a>
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>Contact</a>
+            <a href="/careers" className="nav-link" onClick={(e) => { e.preventDefault(); window.open('/careers', '_blank'); }}>Careers</a>
           </div>
           <div className="nav-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span className="bar"></span>
@@ -825,6 +827,7 @@ function App() {
       <Route path="/brochure" element={<Brochure />} />
       <Route path="/brochure-pdf" element={<BrochureViewer />} />
       <Route path="/brochure-page4" element={<BrochurePage4 />} />
+      <Route path="/careers" element={<Careers />} />
     </Routes>
   )
 }
